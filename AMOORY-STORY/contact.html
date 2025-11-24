@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا | AMOORY STORE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="logo">AMOORY STORE</a>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav id="menu" class="sidebar">
+  <button class="close-btn" onclick="toggleMenu()">×</button>
+  <a href="index.html">الرئيسية</a>
+  <a href="store.html">المتجر</a>
+  <a href="login.html">تسجيل الدخول</a>
+  <a href="wallet.html">المحفظة</a>
+  <a href="contact.html">تواصل معنا</a>
+  <a href="about.html">عن المتجر</a>
+</nav>
+<!-- خلفية شفافة للقائمة -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<main class="content">
+  <h2 class="page-title">📩 تواصل معنا</h2>
+  <form id="contactForm" class="contact-form">
+    <input type="text" placeholder="اسمك الكامل" required>
+    <input type="email" placeholder="البريد الإلكتروني" required>
+    <textarea placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
+    <button class="btn" type="submit">إرسال</button>
+  </form>
+
+  <div class="hero">
+    <a class="btn" href="https://wa.me/249999200203" target="_blank">💬 تواصل عبر واتساب</a>
+  </div>
+</main>
+
+<a class="whatsapp-btn" href="https://wa.me/249999200203" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer class="footer">
+  <div class="icons">
+    <a href="https://facebook.com/" style="--color:#1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://t.me/" style="--color:#229ED9;"><i class="fa-brands fa-telegram"></i></a>
+    <a href="https://wa.me/249999200203" style="--color:#25D366;"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://www.tiktok.com/" style="--color:#010101;"><i class="fa-brands fa-tiktok"></i></a>
+  </div>
+  <p>© 2025 AMOORY STORE — جميع الحقوق محفوظة.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  const overlay = document.getElementById('overlay');
+  const isOpen = menu.style.transform === 'translateX(0%)';
+
+  if (isOpen) {
+    menu.style.transform = 'translateX(100%)';
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
+  } else {
+    menu.style.transform = 'translateX(0%)';
+    overlay.style.opacity = '1';
+    overlay.style.visibility = 'visible';
+  }
+}
+</script>
+
+
+<button id="scrollTopBtn" title="العودة للأعلى">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div class="bottom-nav">
+  <a href="index.html">
+    <i class="fas fa-home"></i>
+    <span>الرئيسية</span>
+  </a>
+  <a href="store.html">
+    <i class="fas fa-store"></i>
+    <span>المتجر</span>
+  </a>
+  <a href="account.html">
+    <i class="fas fa-user"></i>
+    <span>حسابي</span>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

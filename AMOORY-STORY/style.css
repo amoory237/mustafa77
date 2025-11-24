@@ -1,0 +1,973 @@
+/* === إعداد عام === */
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #222;
+  direction: rtl;
+}
+
+/* === الرأس (الهيدر) === */
+.header {
+  background: linear-gradient(90deg, #ff4da6, #9b59b6);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* === القائمة الجانبية === */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.1);
+  padding-top: 60px;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu a {
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.side-menu a:hover, 
+.side-menu a.active {
+  background: linear-gradient(90deg, #ff4da6, #9b59b6);
+  color: #fff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #9b59b6;
+}
+
+/* === المحتوى العام === */
+.content {
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  color: #9b59b6;
+}
+
+/* === شبكة المنتجات === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.card h4 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: #666;
+  margin: 0 0 10px;
+}
+
+/* === الأزرار === */
+.btn {
+  background: linear-gradient(90deg, #ff4da6, #9b59b6);
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* === النماذج === */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* === زر واتساب ثابت === */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* === صندوق المحفظة === */
+.wallet-box {
+  text-align: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.wallet-box h1 {
+  color: #9b59b6;
+  font-size: 32px;
+}
+
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer .icons a {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--color);
+  box-shadow: 0 0 10px var(--color);
+  transition: 0.3s;
+}
+
+.footer .icons a:hover {
+  background: var(--color);
+  color: #fff;
+  box-shadow: 0 0 20px var(--color), 0 0 40px var(--color);
+}
+
+.footer p {
+  color: #aaa;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.footer {
+  background: linear-gradient(135deg, #ff3e8f, #6c63ff);
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 60px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+.footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer .icons a {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--color);
+  box-shadow: 0 0 10px var(--color);
+  transition: 0.3s;
+}
+
+.footer .icons a:hover {
+  background: var(--color);
+  color: #fff;
+  box-shadow: 0 0 20px var(--color), 0 0 40px var(--color);
+}
+
+.footer p {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 13px;
+  margin-top: 10px;
+}
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #ff3e8f, #6c63ff);
+  color: white;
+  cursor: pointer;
+  padding: 14px 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* إخفاء الشريط في الشاشات الكبيرة (الكمبيوتر) */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+/* إظهار الشريط فقط في الهواتف */
+@media (max-width: 767px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #d81b60, #ec407a);
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .bottom-nav a {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-nav i {
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  .bottom-nav a.active {
+    color: #ffe600;
+  }
+}
+
+/* زر فتح القائمة */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px; /* نقلناه إلى اليمين */
+  background: linear-gradient(135deg, #ff3e8f, #6c63ff);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0; /* تظهر من اليمين */
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transform: translateX(100%); /* تبدأ مغلقة */
+  transition: 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+/* الروابط داخل القائمة */
+.sidebar a {
+  padding: 15px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: linear-gradient(90deg, #ff3e8f, #6c63ff);
+  color: #fff;
+}
+
+/* زر الإغلاق داخل القائمة */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px; /* يبقى يسار داخل القائمة */
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #ff3e8f;
+  cursor: pointer;
+}
+/* خلفية شفافة عند فتح القائمة */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+/* شاشة التحميل */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #000000, #1a0033);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* النص المتوهج */
+.glow-text {
+  font-size: 32px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 10px #ff3e8f, 0 0 20px #6c63ff, 0 0 40px #6c63ff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff3e8f, 0 0 20px #6c63ff;
+  }
+  to {
+    text-shadow: 0 0 20px #ff3e8f, 0 0 40px #6c63ff, 0 0 60px #6c63ff;
+  }
+}
+
+/* عند إخفاء الشاشة */
+#loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* تصميم المنتجات */
+.product {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* النص الذي يظهر عند التمرير */
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(108, 99, 255, 0.7);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* التأثير عند التمرير */
+.product:hover img {
+  transform: scale(1.05);
+}
+
+.product:hover {
+  box-shadow: 0 0 25px rgba(108, 99, 255, 0.4);
+}
+
+.product:hover .overlay-text {
+  opacity: 1;
+}
+
+/* ======= القائمه الجانبية ======= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  color: #111;
+  transform: translateX(100%);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0);
+}
+.sidebar.open {
+  transform: translateX(0);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+.sidebar a:hover {
+  background: #f8f8f8;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ======= الخلفية عند فتح القائمة ======= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 900;
+}
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ======= الهيدر ======= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #111;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.logo {
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #111;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ======= المحتوى ======= */
+.content {
+  padding: 80px 20px 120px;
+  text-align: center;
+  background: #fff;
+  color: #111;
+}
+
+/* ======= نموذج التواصل ======= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+  background: #fff;
+  color: #111;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffb300;
+  box-shadow: 0 0 6px rgba(255,179,0,0.4);
+}
+.btn {
+  background: #ffb300;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ffcb3d;
+}
+
+/* ======= الزر العائم للواتساب ======= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  left: 15px;
+  background: #25d366;
+  color: white;
+  font-size: 22px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 900;
+  transition: transform 0.3s ease;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ======= الفوتر ======= */
+.footer {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+.footer .icons {
+  margin-bottom: 10px;
+}
+.footer .icons a {
+  margin: 0 10px;
+  font-size: 20px;
+  color: var(--color);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.footer .icons a:hover {
+  transform: scale(1.3);
+}
+
+/* ======= الزر السفلي ======= */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #ddd;
+  z-index: 800;
+}
+.bottom-nav a {
+  color: #555;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  flex: 1;
+  transition: 0.3s;
+}
+.bottom-nav a i {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.bottom-nav a.active,
+.bottom-nav a:hover {
+  color: #ffb300;
+}
+
+/* ======= زر الصعود ======= */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 140px;
+  right: 15px;
+  background: #ffb300;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: none;
+  cursor: pointer;
+  z-index: 900;
+  transition: background 0.3s;
+}
+#scrollTopBtn:hover {
+  background: #ffc733;
+}
+
+/* 🌟 إعدادات عامة */
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #0b0c10;
+  color: #fff;
+  direction: rtl;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+/* 🌟 الهيدر */
+.header {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.menu {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 🌟 القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background: #1a1a1a;
+  color: white;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #00bcd4;
+  color: #000;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  float: left;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 500;
+}
+
+/* 🌟 المحتوى */
+.content {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.page-title {
+  color: #00bcd4;
+  margin-bottom: 30px;
+}
+
+/* 🌟 بطاقات المتجر */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00bcd4;
+}
+
+.btn {
+  display: inline-block;
+  background: #00bcd4;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #00bcd4;
+  border: 2px solid #00bcd4;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #00bcd4;
+  color: #000;
+}
+
+/* 🌟 صندوق المحفظة */
+.wallet-box {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 350px;
+  margin: auto;
+  box-shadow: 0 0 12px rgba(0,188,212,0.3);
+}
+
+.wallet-box h1 {
+  color: #00bcd4;
+  margin: 10px 0;
+}
+
+/* 🌟 الفوتر */
+.footer {
+  text-align: center;
+  background: #101010;
+  padding: 20px;
+  margin-top: 30px;
+  border-top: 1px solid #222;
+}
+
+.footer .icons a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer .icons a:hover {
+  color: var(--color);
+  transform: scale(1.2);
+}
+
+/* 🌟 زر واتساب عائم */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 🌟 زر الصعود للأعلى */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: none;
+  background: #00bcd4;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 🌟 شريط التنقل السفلي */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  border-top: 2px solid #00bcd4;
+  z-index: 1000;
+}
+
+.bottom-nav a {
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+}
+
+.bottom-nav a.active,
+.bottom-nav a:hover {
+  color: #00bcd4;
+}
+
+.bottom-nav i {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+

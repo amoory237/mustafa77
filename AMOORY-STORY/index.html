@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMOORY STORE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- شاشة التحميل -->
+<div id="loader">
+  <h1 class="glow-text">AMOORY STORE</h1>
+</div>
+
+  <!-- ======= الهيدر ======= -->
+  <header class="header">
+<a href="index.html" class="logo">AMOORY STORE</a>
+  <div class="header-icons">
+    <i class="fas fa-moon" id="darkModeToggle" onclick="toggleDarkMode()"></i>
+    <i class="fas fa-shopping-cart"></i>
+  </div>
+</header>
+
+  <!-- زر فتح القائمة -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<!-- القائمة الجانبية -->
+<nav id="menu" class="sidebar">
+  <button class="close-btn" onclick="toggleMenu()">×</button>
+  <a href="index.html">الرئيسية</a>
+  <a href="store.html">المتجر</a>
+  <a href="login.html">تسجيل الدخول</a>
+  <a href="wallet.html">المحفظة</a>
+  <a href="contact.html">تواصل معنا</a>
+  <a href="about.html">عن المتجر</a>
+</nav>
+<!-- خلفية شفافة للقائمة -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- ======= المحتوى الرئيسي ======= -->
+  <main class="content">
+    <section class="hero">
+      <h2>مرحبًا بك في <span>AMOORY STORE</span></h2>
+      <p>أفضل موقع لشحن الألعاب الإلكترونية بسرعة وأمان 🔥</p>
+      <a href="store.html" class="btn hero-btn">تسوق الآن</a>
+    </section>
+
+    <section class="games">
+      <h3>الألعاب الأكثر طلبًا</h3>
+
+      <div class="game-card">
+        <img src="https://i.imgur.com/ZWz7qTk.png" alt="PUBG">
+        <h4>شحن PUBG</h4>
+        <a href="store.html" class="btn">شحن الآن</a>
+      </div>
+
+      <div class="game-card">
+        <img src="https://i.imgur.com/1j1HjXp.png" alt="Free Fire">
+        <h4>شحن Free Fire</h4>
+        <a href="store.html" class="btn">شحن الآن</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ======= زر واتساب ======= -->
+  <a href="https://wa.me/962700000000" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+  <footer class="footer">
+  <div class="icons">
+    <a href="https://facebook.com/" style="--color:#1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://t.me/" style="--color:#229ED9;"><i class="fa-brands fa-telegram"></i></a>
+    <a href="https://wa.me/249999200203" style="--color:#25D366;"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://www.tiktok.com/" style="--color:#010101;"><i class="fa-brands fa-tiktok"></i></a>
+  </div>
+  <p>© 2025 AMOORY STORE — جميع الحقوق محفوظة.</p>
+</footer>
+<!-- زر الصعود للأعلى -->
+<button id="scrollTopBtn" title="العودة للأعلى">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<div class="bottom-nav">
+  <a href="index.html" class="active">
+    <i class="fas fa-home"></i>
+    <span>الرئيسية</span>
+  </a>
+  <a href="store.html">
+    <i class="fas fa-store"></i>
+    <span>المتجر</span>
+  </a>
+  <a href="account.html">
+    <i class="fas fa-user"></i>
+    <span>حسابي</span>
+  </a>
+</div>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  const overlay = document.getElementById('overlay');
+  const isOpen = menu.style.transform === 'translateX(0%)';
+
+  if (isOpen) {
+    menu.style.transform = 'translateX(100%)';
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
+  } else {
+    menu.style.transform = 'translateX(0%)';
+    overlay.style.opacity = '1';
+    overlay.style.visibility = 'visible';
+  }
+}
+</script>
+
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+  }, 1500); // تختفي بعد 1.5 ثانية
+});
+</script>
+<div class="bottom-nav">
+  <a href="index.html">
+    <i class="fas fa-home"></i>
+    <span>الرئيسية</span>
+  </a>
+  <a href="store.html">
+    <i class="fas fa-store"></i>
+    <span>المتجر</span>
+  </a>
+  <a href="account.html">
+    <i class="fas fa-user"></i>
+    <span>حسابي</span>
+  </a>
+</div>
+</body>
+</html>
