@@ -261,28 +261,29 @@ function setupFilters() {
             filterCars();
         });
     });
-// Price filter
-const priceSlider = document.getElementById('priceRangeSlider');
-const maxPriceLabel = document.getElementById('maxPriceLabel');
 
-if (priceSlider) {
-    priceSlider.addEventListener('input', (e) => {
-        maxPriceLabel.textContent = formatPrice(e.target.value) + ' د.أ';
+    // Price filter
+    const priceSlider = document.getElementById('priceRangeSlider');
+    const maxPriceLabel = document.getElementById('maxPriceLabel');
+    
+    if (priceSlider) {
+        priceSlider.addEventListener('input', (e) => {
+            maxPriceLabel.textContent = formatPrice(e.target.value) + ' د.أ';
+        });
+        
+        priceSlider.addEventListener('change', filterCars);
+    }
+
+    // Price quick filters
+    const priceTags = document.querySelectorAll('.price-tag');
+    priceTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            const price = tag.dataset.price;
+            priceSlider.value = price;
+            maxPriceLabel.textContent = formatPrice(price) + ' د.أ';
+            filterCars();
+        });
     });
-
-    priceSlider.addEventListener('change', filterCars);
-}
-
-// Price quick filters
-const priceTags = document.querySelectorAll('.price-tag');
-priceTags.forEach(tag => {
-    tag.addEventListener('click', () => {
-        const price = tag.dataset.price;
-        priceSlider.value = price;
-        maxPriceLabel.textContent = formatPrice(price) + ' د.أ';
-        filterCars();
-    });
-});
 
     // Brand filters
     const brandCheckboxes = document.querySelectorAll('input[name="brand"]');
@@ -582,4 +583,3 @@ function showNotification(message, type = 'success') {
 
 // Initialize
 updateCartCount();
-
