@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Teihi - متجر السيارات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link active">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>متجر السيارات</h1>
+            <p>اختر من بين أفضل السيارات المتوفرة</p>
+        </div>
+    </section>
+
+    <section class="shop-section">
+        <div class="container">
+            <!-- Modern Filter Bar -->
+            <div class="modern-filter-bar">
+                <div class="filter-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="ابحث عن السيارة المثالية...">
+                </div>
+                
+                <div class="filter-chips">
+                    <button class="filter-chip active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        الكل
+                        <span class="chip-count">22</span>
+                    </button>
+                    <button class="filter-chip" data-filter="luxury">
+                        <i class="fas fa-gem"></i>
+                        فاخرة
+                        <span class="chip-count">13</span>
+                    </button>
+                    <button class="filter-chip" data-filter="suv">
+                        <i class="fas fa-truck"></i>
+                        SUV
+                        <span class="chip-count">7</span>
+                    </button>
+                    <button class="filter-chip" data-filter="sedan">
+                        <i class="fas fa-car"></i>
+                        سيدان
+                        <span class="chip-count">3</span>
+                    </button>
+                    <button class="filter-chip" data-filter="sport">
+                        <i class="fas fa-flag-checkered"></i>
+                        رياضية
+                        <span class="chip-count">6</span>
+                    </button>
+                </div>
+
+                <div class="filter-actions">
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" id="priceFilterBtn">
+                            <i class="fas fa-dollar-sign"></i>
+                            السعر
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown-menu" id="priceFilterMenu">
+                            <h4>نطاق السعر</h4>
+                            <div class="price-range-modern">
+                                <input type="range" min="0" max="3000000" value="3000000" id="priceRangeSlider" step="10000">
+                                <div class="price-labels">
+                                    <span>0 د.أ</span>
+                                    <span id="maxPriceLabel">3,000,000 د.أ</span>
+                                </div>
+                            </div>
+                            <div class="price-quick-filters">
+                                <button class="price-tag" data-price="50000">أقل من 50,000</button>
+                                <button class="price-tag" data-price="100000">أقل من 100,000</button>
+                                <button class="price-tag" data-price="500000">أقل من 500,000</button>
+                                <button class="price-tag" data-price="3000000">الكل</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" id="brandFilterBtn">
+                            <i class="fas fa-flag"></i>
+                            الماركة
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown-menu" id="brandFilterMenu">
+                            <h4>اختر الماركة</h4>
+                            <div class="brand-grid">
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="ferrari">
+                                    <span><i class="fas fa-flag-checkered"></i> Ferrari</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="porsche">
+                                    <span><i class="fas fa-trophy"></i> Porsche</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="rangerover">
+                                    <span><i class="fas fa-crown"></i> Range Rover</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="mercedes">
+                                    <span><i class="fas fa-star"></i> Mercedes</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="bmw">
+                                    <span><i class="fas fa-bolt"></i> BMW</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="bugatti">
+                                    <span><i class="fas fa-gem"></i> Bugatti</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="toyota">
+                                    <span><i class="fas fa-car"></i> Toyota</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="hyundai">
+                                    <span><i class="fas fa-car-side"></i> Hyundai</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="kia">
+                                    <span><i class="fas fa-road"></i> Kia</span>
+                                </label>
+                                <label class="brand-option">
+                                    <input type="checkbox" name="brand" value="nissan">
+                                    <span><i class="fas fa-car-alt"></i> Nissan</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-dropdown">
+                        <button class="filter-btn" id="yearFilterBtn">
+                            <i class="fas fa-calendar"></i>
+                            السنة
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown-menu" id="yearFilterMenu">
+                            <h4>سنة الصنع</h4>
+                            <div class="year-options">
+                                <label class="year-option">
+                                    <input type="radio" name="year" value="2024">
+                                    <span>2024</span>
+                                </label>
+                                <label class="year-option">
+                                    <input type="radio" name="year" value="2023">
+                                    <span>2023</span>
+                                </label>
+                                <label class="year-option">
+                                    <input type="radio" name="year" value="2022">
+                                    <span>2022</span>
+                                </label>
+                                <label class="year-option">
+                                    <input type="radio" name="year" value="2021">
+                                    <span>2021</span>
+                                </label>
+                                <label class="year-option">
+                                    <input type="radio" name="year" value="all" checked>
+                                    <span>الكل</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <select class="sort-select-modern" id="sortSelect">
+                        <option value="featured">
+                            <i class="fas fa-star"></i>
+                            الأكثر شهرة
+                        </option>
+                        <option value="price-high">السعر: الأعلى أولاً</option>
+                        <option value="price-low">السعر: الأقل أولاً</option>
+                        <option value="newest">الأحدث</option>
+                        <option value="name">الاسم (أ-ي)</option>
+                    </select>
+
+                    <button class="view-toggle" id="viewToggle" title="تغيير العرض">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Active Filters Display -->
+            <div class="active-filters" id="activeFilters">
+                <!-- Active filters will be displayed here -->
+            </div>
+
+            <div class="shop-layout">
+                <div class="shop-content">
+                    <div class="shop-header">
+                        <p class="results-count">عرض <strong id="resultsCount">22</strong> سيارة</p>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Car Cards - Sorted by Price (Highest First) -->
+                        
+                        <div class="shop-card" data-price="2500000" data-category="sport luxury" data-brand="bugatti" data-year="2023">
+                            <div class="shop-card-badge">حصري</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>بوغاتي شيرون 2023</h3>
+                                <p>موديل 2023 • 1,500 كم • 1500 حصان • كاربون فايبر</p>
+                                <div class="shop-card-footer">
+                                    <span class="price" style="font-size: 1.3rem;">2,500,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="11" data-name="بوغاتي شيرون 2023" data-price="2500000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="85000" data-category="sport luxury" data-brand="mercedes" data-year="2024">
+                            <div class="shop-card-badge">AMG</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس AMG GT 2024</h3>
+                                <p>موديل 2024 • صفر • 585 حصان • كربون • رياضية</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">85,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="15" data-name="مرسيدس AMG GT 2024" data-price="85000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="18500" data-category="sedan" data-brand="toyota" data-year="2024">
+                            <div class="shop-card-badge">مميز</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>تويوتا كامري 2024</h3>
+                                <p>موديل 2024 • صفر • 1000 حصان • هايبرد • كاربون</p>
+                                <div class="shop-card-footer">
+                                    <span class="price" style="font-size: 1.3rem;">1,850,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="16" data-name="فيراري SF90 Stradale 2024" data-price="1850000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="650000" data-category="sport luxury" data-brand="ferrari" data-year="2023">
+                            <div class="shop-card-badge">رياضية</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-flag-checkered"></i>
+                                </div>
+                            </div>  <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>فيراري 488 GTB 2023</h3>
+                                <p>موديل 2023 • 12,000 كم • 670 حصان • V8 توربو</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">650,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="17" data-name="فيراري 488 GTB 2023" data-price="650000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="380000" data-category="sport luxury" data-brand="porsche" data-year="2024">
+                            <div class="shop-card-badge">فاخرة</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>بورش 911 Turbo S 2024</h3>
+                                <p>موديل 2024 • صفر • 650 حصان • PDK • سبورت كرونو</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">380,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="18" data-name="بورش 911 Turbo S 2024" data-price="380000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="195000" data-category="sport luxury" data-brand="porsche" data-year="2024">
+                            <div class="shop-card-badge">رياضية</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>بورش Taycan Turbo 2024</h3>
+                                <p>موديل 2024 • صفر • كهربائية • 680 حصان • بانوراما</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">195,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="19" data-name="بورش Taycan Turbo 2024" data-price="195000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="145000" data-category="suv luxury" data-brand="rangerover" data-year="2024">
+                            <div class="shop-card-badge">VIP</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>رينج روفر Sport 2024</h3>
+                                <p>موديل 2024 • صفر • V8 • جلد فاخر • نظام ترفيه</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">145,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="20" data-name="رينج روفر Sport 2024" data-price="145000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="98000" data-category="suv luxury" data-brand="rangerover" data-year="2023">
+                            <div class="shop-card-badge">فاخرة</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>رينج روفر Evoque 2023</h3>
+                                <p>موديل 2023 • 18,000 كم • هايبرد • بانوراما • فحص</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">98,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="21" data-name="رينج روفر Evoque 2023" data-price="98000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="75000" data-category="suv luxury" data-brand="porsche" data-year="2023">
+                            <div class="shop-card-badge">SUV فاخر</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>بورش Cayenne Turbo 2023</h3>
+                                <p>موديل 2023 • 25,000 كم • 550 حصان • بانوراما • جلد</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">75,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="22" data-name="بورش Cayenne Turbo 2023" data-price="75000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="45000" data-category="suv luxury" data-brand="bmw" data-year="2024">
+                            <div class="shop-card-badge">فاخرة</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>BMW X5 2024</h3>
+                                <p>موديل 2024 • صفر كيلو • M Sport • بانوراما</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">45,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="10" data-name="BMW X5 2024" data-price="45000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="42000" data-category="sedan">
+                            <div class="shop-card-badge">جديد</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس C-Class 2023</h3>
+                                <p>موديل 2023 • 18,000 كم • تيربو • شاشة ذكية</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">42,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="14" data-name="مرسيدس C-Class 2023" data-price="42000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="38500" data-category="sedan">
+                            <div class="shop-card-badge">فاخرة</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس E-Class 2024</h3>
+                                <p>موديل 2024 • صفر كيلو • AMG • جلد طبيعي</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">38,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="12" data-name="مرسيدس E-Class 2024" data-price="38500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="32500" data-category="sport">
+                            <div class="shop-card-badge">VIP</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>BMW الفئة الثالثة 2023</h3>
+                                <p>موديل 2023 • 28,000 كم • فل أوبشن • جلد</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">32,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="9" data-name="BMW الفئة الثالثة 2023" data-price="32500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="28500" data-category="sport">
+                            <div class="shop-card-badge">رياضية</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مازدا CX-5 2024</h3>
+                                <p>موديل 2024 • صفر كيلو • تيربو • فل كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">28,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="5" data-name="مازدا CX-5 2024" data-price="28500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="24900" data-category="sedan">
+                            <div class="shop-card-badge">جديد</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>شيفروليه ماليبو 2024</h3>
+                                <p>موديل 2024 • صفر • ضمان شامل • فل كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">24,900 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="7" data-name="شيفروليه ماليبو 2024" data-price="24900">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="22900" data-category="suv">
+                            <div class="shop-card-badge popular">صفر كيلو</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>هونداي توسان 2024</h3>
+                                <p>موديل 2024 (صفر) • ضمان 5 سنوات • 4WD • فل أوبشن</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">22,900 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="2" data-name="هونداي توسان 2024" data-price="22900">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="21500" data-category="suv">
+                            <div class="shop-card-badge">هايبرد</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>كيا سبورتاج 2024</h3>
+                                <p>موديل 2024 • 15,000 كم • هايبرد • اقتصادية</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">21,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="3" data-name="كيا سبورتاج 2024" data-price="21500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="19200" data-category="suv">
+                            <div class="shop-card-badge">عرض خاص</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #1f2937 0%, #4b5563 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>نيسان اكس تريل 2023</h3>
+                                <p>موديل 2023 • 32,000 كم • 4WD • فل أوبشن</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">19,200 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="6" data-name="نيسان اكس تريل 2023" data-price="19200">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="18500" data-category="sedan">
+                            <div class="shop-card-badge">الأكثر مبيعاً</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>تويوتا كامري 2023</h3>
+                                <p>موديل 2023 • 45,000 كم • أوتوماتيك • فل كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">18,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="1" data-name="تويوتا كامري 2023" data-price="18500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="16800" data-category="sedan">
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>هوندا اكورد 2023</h3>
+                                <p>موديل 2022 • 42,000 كم • أوتوماتيك • فحص كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">17,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="8" data-name="فولكس واجن جيتا 2022" data-price="17500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="16800" data-category="sedan">
+                            <div class="shop-card-badge">خصم</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>هوندا أكورد 2022</h3>
+                                <p>موديل 2022 • 38,000 كم • أوتوماتيك • حالة ممتازة</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">16,800 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="4" data-name="هوندا أكورد 2022" data-price="16800">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="shop-card" data-price="18500" data-category="sedan">
+                            <div class="shop-card-badge">الأكثر مبيعاً</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>تويوتا كامري 2023</h3>
+                                <p>موديل 2023 • 45,000 كم • أوتوماتيك • فل كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">18,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="1" data-name="تويوتا كامري 2023" data-price="18500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="22900" data-category="suv">
+                            <div class="shop-card-badge popular">صفر كيلو</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>هونداي توسان 2024</h3>
+                                <p>موديل 2024 (صفر) • ضمان 5 سنوات • 4WD • فل أوبشن</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">22,900 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="2" data-name="هونداي توسان 2024" data-price="22900">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="21500" data-category="suv">
+                            <div class="shop-card-badge">هايبرد</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>كيا سبورتاج 2024</h3>
+                                <p>موديل 2024 • 15,000 كم • هايبرد • اقتصادية</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">21,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="3" data-name="كيا سبورتاج 2024" data-price="21500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="16800" data-category="sedan">
+                            <div class="shop-card-badge">خصم</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>هوندا أكورد 2022</h3>
+                                <p>موديل 2022 • 38,000 كم • أوتوماتيك • حالة ممتازة</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">16,800 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="4" data-name="هوندا أكورد 2022" data-price="16800">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="28500" data-category="sport">
+                            <div class="shop-card-badge">رياضية</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مازدا CX-5 2024</h3>
+                                <p>موديل 2024 • صفر كيلو • تيربو • فل كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">28,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="5" data-name="مازدا CX-5 2024" data-price="28500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="19200" data-category="suv">
+                            <div class="shop-card-badge">عرض خاص</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #1f2937 0%, #4b5563 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>نيسان اكس تريل 2023</h3>
+                                <p>موديل 2023 • 32,000 كم • 4WD • فل أوبشن</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">19,200 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="6" data-name="نيسان اكس تريل 2023" data-price="19200">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="24900" data-category="sedan">
+                            <div class="shop-card-badge">جديد</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>شيفروليه ماليبو 2024</h3>
+                                <p>موديل 2024 • صفر • ضمان شامل • فل كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">24,900 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="7" data-name="شيفروليه ماليبو 2024" data-price="24900">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="17500" data-category="sedan">
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #84cc16 0%, #22c55e 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>فولكس واجن جيتا 2022</h3>
+                                <p>موديل 2022 • 42,000 كم • أوتوماتيك • فحص كامل</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">17,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="8" data-name="فولكس واجن جيتا 2022" data-price="17500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="32500" data-category="sport">
+                            <div class="shop-card-badge">VIP</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>BMW الفئة الثالثة 2023</h3>
+                                <p>موديل 2023 • 28,000 كم • فل أوبشن • جلد</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">32,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="9" data-name="BMW الفئة الثالثة 2023" data-price="32500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="45000" data-category="sport">
+                            <div class="shop-card-badge">فاخرة</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>BMW X5 2024</h3>
+                                <p>موديل 2024 • صفر كيلو • M Sport • بانوراما</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">45,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="10" data-name="BMW X5 2024" data-price="45000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="2500000" data-category="sport">
+                            <div class="shop-card-badge">حصري</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>بوغاتي شيرون 2023</h3>
+                                <p>موديل 2023 • 1,500 كم • 1500 حصان • كاربون فايبر</p>
+                                <div class="shop-card-footer">
+                                    <span class="price" style="font-size: 1.3rem;">2,500,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="11" data-name="بوغاتي شيرون 2023" data-price="2500000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="38500" data-category="sedan">
+                            <div class="shop-card-badge">فاخرة</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس E-Class 2024</h3>
+                                <p>موديل 2024 • صفر كيلو • AMG • جلد طبيعي</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">38,500 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="12" data-name="مرسيدس E-Class 2024" data-price="38500">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="52000" data-category="suv">
+                            <div class="shop-card-badge">VIP</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس GLE 2024</h3>
+                                <p>موديل 2024 • صفر • 4MATIC • بانوراما • نافيجيشن</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">52,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="13" data-name="مرسيدس GLE 2024" data-price="52000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="42000" data-category="sedan">
+                            <div class="shop-card-badge">جديد</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car-side"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس C-Class 2023</h3>
+                                <p>موديل 2023 • 18,000 كم • تيربو • شاشة ذكية</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">42,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="14" data-name="مرسيدس C-Class 2023" data-price="42000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shop-card" data-price="85000" data-category="sport">
+                            <div class="shop-card-badge">AMG</div>
+                            <div class="shop-card-image">
+                                <div class="card-preview" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="shop-card-content">
+                                <h3>مرسيدس AMG GT 2024</h3>
+                                <p>موديل 2024 • صفر • 585 حصان • كربون • رياضية</p>
+                                <div class="shop-card-footer">
+                                    <span class="price">85,000 د.أ</span>
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="15" data-name="مرسيدس AMG GT 2024" data-price="85000">
+                                        <i class="fas fa-phone"></i>
+                                        استفسر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>سلة التسوق</h2>
+                <button class="close-cart" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-modal-body" id="cartItems">
+                <p class="empty-cart">السلة فارغة</p>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <span>المجموع:</span>
+                    <strong id="cartTotal">$0</strong>
+                </div>
+                <button class="btn btn-primary btn-block">إتمام الطلب</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض مصطفى تيهي لبيع السيارات الفاخرة والمميزة في العقبة، الأردن</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="gallery.html">المعرض</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة القيادة</a></li>
+                        <li><a href="#">التقسيط المريح</a></li>
+                        <li><a href="#">ضمان ما بعد البيع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل</h5>
+                        <p>السبت - الخميس: 9:00 ص - 10:00 م</p>
+                        <p>الجمعة: 2:00 م - 10:00 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/modern-filter.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

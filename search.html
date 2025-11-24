@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="البحث المتقدم عن السيارات - معرض مصطفى تيهي">
+    <title>البحث المتقدم - Mustafa Teihi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link active">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <h1 class="page-title">البحث المتقدم</h1>
+            <p class="page-subtitle">ابحث عن سيارة أحلامك بسهولة</p>
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <span>/</span>
+                <span>البحث المتقدم</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Search Section -->
+    <section class="advanced-search section-padding">
+        <div class="container">
+            <!-- Search Filters -->
+            <div class="search-filters-card">
+                <h2><i class="fas fa-filter"></i> فلاتر البحث</h2>
+                <form id="advancedSearchForm" class="search-form">
+                    <div class="filters-grid">
+                        <!-- Text Search -->
+                        <div class="filter-group full-width">
+                            <label><i class="fas fa-search"></i> البحث بالكلمات</label>
+                            <input type="text" id="searchText" placeholder="ابحث عن موديل، ماركة، أو كلمة مفتاحية...">
+                        </div>
+
+                        <!-- Category -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-tag"></i> الفئة</label>
+                            <select id="category">
+                                <option value="">جميع الفئات</option>
+                                <option value="luxury">فاخرة</option>
+                                <option value="suv">SUV</option>
+                                <option value="sport">رياضية</option>
+                                <option value="sedan">سيدان</option>
+                                <option value="hatchback">هاتشباك</option>
+                                <option value="electric">كهربائية</option>
+                            </select>
+                        </div>
+
+                        <!-- Brand -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-copyright"></i> الماركة</label>
+                            <select id="brand">
+                                <option value="">جميع الماركات</option>
+                                <option value="bmw">BMW</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="kia">KIA</option>
+                                <option value="tesla">Tesla</option>
+                            </select>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-dollar-sign"></i> السعر من</label>
+                            <input type="number" id="minPrice" placeholder="0 دينار" min="0">
+                        </div>
+
+                        <div class="filter-group">
+                            <label><i class="fas fa-dollar-sign"></i> السعر إلى</label>
+                            <input type="number" id="maxPrice" placeholder="100,000 دينار" min="0">
+                        </div>
+
+                        <!-- Year Range -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-calendar"></i> سنة الصنع من</label>
+                            <select id="minYear">
+                                <option value="">أي سنة</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label><i class="fas fa-calendar"></i> سنة الصنع إلى</label>
+                            <select id="maxYear">
+                                <option value="">أي سنة</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+
+                        <!-- Mileage Range -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-tachometer-alt"></i> الكيلومترات من</label>
+                            <input type="number" id="minMileage" placeholder="0 كم" min="0">
+                        </div>
+
+                        <div class="filter-group">
+                            <label><i class="fas fa-tachometer-alt"></i> الكيلومترات إلى</label>
+                            <input type="number" id="maxMileage" placeholder="200,000 كم" min="0">
+                        </div>
+
+                        <!-- Color -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-palette"></i> اللون</label>
+                            <select id="color">
+                                <option value="">جميع الألوان</option>
+                                <option value="black">أسود</option>
+                                <option value="white">أبيض</option>
+                                <option value="silver">فضي</option>
+                                <option value="gray">رمادي</option>
+                                <option value="blue">أزرق</option>
+                                <option value="red">أحمر</option>
+                                <option value="green">أخضر</option>
+                                <option value="brown">بني</option>
+                            </select>
+                        </div>
+
+                        <!-- Transmission -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-cog"></i> ناقل الحركة</label>
+                            <select id="transmission">
+                                <option value="">الكل</option>
+                                <option value="automatic">أوتوماتيك</option>
+                                <option value="manual">يدوي</option>
+                            </select>
+                        </div>
+
+                        <!-- Fuel Type -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-gas-pump"></i> نوع الوقود</label>
+                            <select id="fuelType">
+                                <option value="">الكل</option>
+                                <option value="petrol">بنزين</option>
+                                <option value="diesel">ديزل</option>
+                                <option value="hybrid">هايبرد</option>
+                                <option value="electric">كهربائي</option>
+                            </select>
+                        </div>
+
+                        <!-- Condition -->
+                        <div class="filter-group">
+                            <label><i class="fas fa-star"></i> الحالة</label>
+                            <select id="condition">
+                                <option value="">الكل</option>
+                                <option value="new">جديدة</option>
+                                <option value="used">مستعملة</option>
+                                <option value="certified">معتمدة</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="search-actions">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-search"></i> بحث
+                        </button>
+                        <button type="button" class="btn btn-outline btn-lg" onclick="resetFilters()">
+                            <i class="fas fa-redo"></i> إعادة تعيين
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="search-results">
+                <div class="results-header">
+                    <h3><span id="resultsCount">12</span> نتيجة بحث</h3>
+                    <div class="sort-options">
+                        <label>ترتيب حسب:</label>
+                        <select id="sortBy" onchange="sortResults()">
+                            <option value="newest">الأحدث</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="year">السنة</option>
+                            <option value="mileage">الكيلومترات</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="searchResultsGrid" class="cars-grid">
+                    <!-- Results will be inserted here by JavaScript -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض متخصص في بيع وشراء السيارات الفاخرة والاقتصادية في العقبة، الأردن.</p>
+                    <div class="footer-contact">
+                        <h5>تواصل معنا:</h5>
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="gallery.html">المعرض</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة قيادة مجانية</a></li>
+                        <li><a href="financing.html">تقسيط مريح</a></li>
+                        <li><a href="#">ضمان شامل</a></li>
+                        <li><a href="#">صيانة دورية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل:</h5>
+                        <p>السبت - الخميس: 9 صباحاً - 10 مساءً</p>
+                        <p>الجمعة: 2 مساءً - 10 مساءً</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

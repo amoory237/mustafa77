@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض الخاصة - أدي كار | Ady Car</title>
+    <meta name="description" content="اكتشف أفضل العروض الخاصة على السيارات الفاخرة والرياضية في الأردن مع أدي كار">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/special-offers.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-car-side"></i>
+                        <span>أدي كار</span>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">السيارات</a></li>
+                        <li><a href="special-offers.html" class="active">العروض الخاصة</a></li>
+                        <li><a href="gallery.html">معرض الصور</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="book-appointment.html" class="btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            احجز موعد
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <i class="fas fa-tags"></i>
+                    العروض الخاصة
+                </h1>
+                <p>اكتشف أفضل العروض الحصرية على سياراتنا الفاخرة</p>
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                    <span>/</span>
+                    <span>العروض الخاصة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Filter -->
+    <section class="offers-filter">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">جميع الفئات</option>
+                        <option value="luxury">سيارات فاخرة</option>
+                        <option value="sport">سيارات رياضية</option>
+                        <option value="suv">SUV</option>
+                        <option value="sedan">سيدان</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="discountFilter" class="filter-select">
+                        <option value="">جميع الخصومات</option>
+                        <option value="high">خصم 20% فأكثر</option>
+                        <option value="medium">خصم 10-20%</option>
+                        <option value="low">خصم أقل من 10%</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="sortFilter" class="filter-select">
+                        <option value="newest">الأحدث</option>
+                        <option value="price-low">السعر: من الأقل للأعلى</option>
+                        <option value="price-high">السعر: من الأعلى للأقل</option>
+                        <option value="discount">الخصم الأكبر</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Deals Banner -->
+    <section class="hot-deals">
+        <div class="container">
+            <div class="deals-banner">
+                <div class="deals-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="deals-content">
+                    <h2>عروض ساخنة!</h2>
+                    <p>لا تفوت الفرصة - عروض محدودة لفترة قصيرة</p>
+                </div>
+                <div class="deals-timer" id="offerTimer">
+                    <div class="timer-item">
+                        <span class="timer-value" id="days">05</span>
+                        <span class="timer-label">أيام</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="timer-value" id="hours">12</span>
+                        <span class="timer-label">ساعات</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="timer-value" id="minutes">34</span>
+                        <span class="timer-label">دقائق</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="timer-value" id="seconds">56</span>
+                        <span class="timer-label">ثوان</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Grid -->
+    <section class="offers-section">
+        <div class="container">
+            <div class="offers-grid" id="offersGrid">
+                <!-- Offer 1 -->
+                <div class="offer-card featured" data-category="luxury" data-discount="25">
+                    <div class="offer-badge featured-badge">
+                        <i class="fas fa-star"></i> عرض مميز
+                    </div>
+                    <div class="discount-badge">
+                        <span class="discount-value">25%</span>
+                        <span class="discount-text">خصم</span>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800" alt="Mercedes AMG GT">
+                        <div class="image-overlay">
+                            <a href="car-details.html" class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-category luxury">فاخرة</span>
+                        <h3>مرسيدس AMG GT 2024</h3>
+                        <div class="offer-specs">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-road"></i> 5,000 كم</span>
+                            <span><i class="fas fa-cog"></i> أوتوماتيك</span>
+                        </div>
+                        <div class="offer-price">
+                            <div class="price-info">
+                                <span class="original-price">285,000 دينار</span>
+                                <span class="offer-price-value">213,750 دينار</span>
+                            </div>
+                            <span class="save-amount">توفير 71,250 دينار</span>
+                        </div>
+                        <div class="offer-footer">
+                            <div class="offer-valid">
+                                <i class="fas fa-clock"></i>
+                                <span>صالح حتى: 31 ديسمبر 2024</span>
+                            </div>
+                            <a href="book-appointment.html" class="book-btn">
+                                احجز الآن <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="offer-card" data-category="sport" data-discount="20">
+                    <div class="discount-badge">
+                        <span class="discount-value">20%</span>
+                        <span class="discount-text">خصم</span>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="Porsche 911">
+                        <div class="image-overlay">
+                            <a href="car-details.html" class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-category sport">رياضية</span>
+                        <h3>بورش 911 تيربو 2023</h3>
+                        <div class="offer-specs">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-road"></i> 12,000 كم</span>
+                            <span><i class="fas fa-cog"></i> أوتوماتيك</span>
+                        </div>
+                        <div class="offer-price">
+                            <div class="price-info">
+                                <span class="original-price">395,000 دينار</span>
+                                <span class="offer-price-value">316,000 دينار</span>
+                            </div>
+                            <span class="save-amount">توفير 79,000 دينار</span>
+                        </div>
+                        <div class="offer-footer">
+                            <div class="offer-valid">
+                                <i class="fas fa-clock"></i>
+                                <span>صالح حتى: 25 ديسمبر 2024</span>
+                            </div>
+                            <a href="book-appointment.html" class="book-btn">
+                                احجز الآن <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="offer-card" data-category="luxury" data-discount="15">
+                    <div class="discount-badge">
+                        <span class="discount-value">15%</span>
+                        <span class="discount-text">خصم</span>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800" alt="Mercedes S-Class">
+                        <div class="image-overlay">
+                            <a href="car-details.html" class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-category luxury">فاخرة</span>
+                        <h3>مرسيدس S-Class 2024</h3>
+                        <div class="offer-specs">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-road"></i> 3,200 كم</span>
+                            <span><i class="fas fa-cog"></i> أوتوماتيك</span>
+                        </div>
+                        <div class="offer-price">
+                            <div class="price-info">
+                                <span class="original-price">425,000 دينار</span>
+                                <span class="offer-price-value">361,250 دينار</span>
+                            </div>
+                            <span class="save-amount">توفير 63,750 دينار</span>
+                        </div>
+                        <div class="offer-footer">
+                            <div class="offer-valid">
+                                <i class="fas fa-clock"></i>
+                                <span>صالح حتى: 28 ديسمبر 2024</span>
+                            </div>
+                            <a href="book-appointment.html" class="book-btn">
+                                احجز الآن <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 4 -->
+                <div class="offer-card" data-category="sport" data-discount="18">
+                    <div class="discount-badge">
+                        <span class="discount-value">18%</span>
+                        <span class="discount-text">خصم</span>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800" alt="BMW M5">
+                        <div class="image-overlay">
+                            <a href="car-details.html" class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-category sport">رياضية</span>
+                        <h3>BMW M5 2024</h3>
+                        <div class="offer-specs">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-road"></i> 5,000 كم</span>
+                            <span><i class="fas fa-cog"></i> أوتوماتيك</span>
+                        </div>
+                        <div class="offer-price">
+                            <div class="price-info">
+                                <span class="original-price">225,000 دينار</span>
+                                <span class="offer-price-value">184,500 دينار</span>
+                            </div>
+                            <span class="save-amount">توفير 40,500 دينار</span>
+                        </div>
+                        <div class="offer-footer">
+                            <div class="offer-valid">
+                                <i class="fas fa-clock"></i>
+                                <span>صالح حتى: 30 ديسمبر 2024</span>
+                            </div>
+                            <a href="book-appointment.html" class="book-btn">
+                                احجز الآن <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 5 -->
+                <div class="offer-card" data-category="suv" data-discount="12">
+                    <div class="discount-badge">
+                        <span class="discount-value">12%</span>
+                        <span class="discount-text">خصم</span>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800" alt="Audi Q7">
+                        <div class="image-overlay">
+                            <a href="car-details.html" class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-category suv">SUV</span>
+                        <h3>أودي Q7 2023</h3>
+                        <div class="offer-specs">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-road"></i> 18,000 كم</span>
+                            <span><i class="fas fa-cog"></i> أوتوماتيك</span>
+                        </div>
+                        <div class="offer-price">
+                            <div class="price-info">
+                                <span class="original-price">185,000 دينار</span>
+                                <span class="offer-price-value">162,800 دينار</span>
+                            </div>
+                            <span class="save-amount">توفير 22,200 دينار</span>
+                        </div>
+                        <div class="offer-footer">
+                            <div class="offer-valid">
+                                <i class="fas fa-clock"></i>
+                                <span>صالح حتى: 27 ديسمبر 2024</span>
+                            </div>
+                            <a href="book-appointment.html" class="book-btn">
+                                احجز الآن <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 6 -->
+                <div class="offer-card" data-category="sedan" data-discount="10">
+                    <div class="discount-badge">
+                        <span class="discount-value">10%</span>
+                        <span class="discount-text">خصم</span>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=800" alt="BMW 5 Series">
+                        <div class="image-overlay">
+                            <a href="car-details.html" class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-content">
+                        <span class="offer-category sedan">سيدان</span>
+                        <h3>BMW 5 Series 2023</h3>
+                        <div class="offer-specs">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-road"></i> 22,000 كم</span>
+                            <span><i class="fas fa-cog"></i> أوتوماتيك</span>
+                        </div>
+                        <div class="offer-price">
+                            <div class="price-info">
+                                <span class="original-price">165,000 دينار</span>
+                                <span class="offer-price-value">148,500 دينار</span>
+                            </div>
+                            <span class="save-amount">توفير 16,500 دينار</span>
+                        </div>
+                        <div class="offer-footer">
+                            <div class="offer-valid">
+                                <i class="fas fa-clock"></i>
+                                <span>صالح حتى: 29 ديسمبر 2024</span>
+                            </div>
+                            <a href="book-appointment.html" class="book-btn">
+                                احجز الآن <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Offers -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>لماذا تختار عروضنا؟</h2>
+                <p>نقدم لك أفضل القيمة مع ضمانات استثنائية</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ضمان شامل</h3>
+                    <p>جميع السيارات مع ضمان شامل لمدة سنة</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>صيانة مجانية</h3>
+                    <p>3 جلسات صيانة مجانية في السنة الأولى</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>استبدال مضمون</h3>
+                    <p>إمكانية استبدال السيارة خلال 30 يوم</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <h3>تمويل مرن</h3>
+                    <p>خيارات تمويل بأقساط مريحة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <i class="fas fa-bell"></i>
+                    <div>
+                        <h3>لا تفوت العروض الجديدة!</h3>
+                        <p>اشترك في نشرتنا البريدية واحصل على إشعارات بأحدث العروض</p>
+                    </div>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        اشترك الآن
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car-side"></i>
+                        <span>أدي كار</span>
+                    </div>
+                    <p>وجهتك الأولى لأفضل السيارات الفاخرة والرياضية في الأردن</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mustafateihi005" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">السيارات</a></li>
+                        <li><a href="special-offers.html">العروض الخاصة</a></li>
+                        <li><a href="gallery.html">معرض الصور</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li><a href="#">بيع السيارات</a></li>
+                        <li><a href="#">شراء السيارات</a></li>
+                        <li><a href="#">تمويل</a></li>
+                        <li><a href="#">صيانة</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+962777123456">+962 777 123 456</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mustafateihi2000@gmail.com">mustafateihi2000@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>عمان، الأردن</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 أدي كار - جميع الحقوق محفوظة | تصميم وتطوير: مصطفى تيهي</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/special-offers.js"></script>
+</body>
+</html>

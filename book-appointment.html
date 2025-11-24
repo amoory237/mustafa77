@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="احجز موعد لمعاينة السيارة - معرض مصطفى تيهي">
+    <title>حجز موعد معاينة - Mustafa Teihi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+        <div class="container">
+            <h1 class="page-title">حجز موعد معاينة</h1>
+            <p class="page-subtitle">احجز موعداً لمعاينة السيارة أو تجربة القيادة</p>
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <span>/</span>
+                <span>حجز موعد</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-intro">
+                <h2>احجز موعدك الآن</h2>
+                <p>املأ النموذج أدناه وسنتواصل معك لتأكيد الموعد خلال 24 ساعة</p>
+            </div>
+
+            <div class="booking-content">
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <form id="bookingForm" class="booking-form">
+                        <h3><i class="fas fa-user"></i> معلوماتك الشخصية</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">الاسم الكامل *</label>
+                                <input type="text" id="fullName" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف *</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">المدينة *</label>
+                                <select id="city" class="form-control" required>
+                                    <option value="">اختر المدينة</option>
+                                    <option value="العقبة">العقبة</option>
+                                    <option value="عمان">عمان</option>
+                                    <option value="إربد">إربد</option>
+                                    <option value="الزرقاء">الزرقاء</option>
+                                    <option value="المفرق">المفرق</option>
+                                    <option value="الكرك">الكرك</option>
+                                    <option value="معان">معان</option>
+                                    <option value="أخرى">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-top: 2rem;"><i class="fas fa-car"></i> تفاصيل الموعد</h3>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="appointmentType">نوع الموعد *</label>
+                                <select id="appointmentType" class="form-control" required>
+                                    <option value="">اختر نوع الموعد</option>
+                                    <option value="معاينة">معاينة السيارة</option>
+                                    <option value="تجربة">تجربة القيادة</option>
+                                    <option value="استشارة">استشارة شراء</option>
+                                    <option value="صيانة">استفسار عن الصيانة</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="carInterest">السيارة المهتم بها</label>
+                                <input type="text" id="carInterest" class="form-control" placeholder="مثال: BMW X5 2023">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferredDate">التاريخ المفضل *</label>
+                                <input type="date" id="preferredDate" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferredTime">الوقت المفضل *</label>
+                                <select id="preferredTime" class="form-control" required>
+                                    <option value="">اختر الوقت</option>
+                                    <option value="9-10">9:00 - 10:00 صباحاً</option>
+                                    <option value="10-11">10:00 - 11:00 صباحاً</option>
+                                    <option value="11-12">11:00 - 12:00 ظهراً</option>
+                                    <option value="12-1">12:00 - 1:00 ظهراً</option>
+                                    <option value="2-3">2:00 - 3:00 عصراً</option>
+                                    <option value="3-4">3:00 - 4:00 عصراً</option>
+                                    <option value="4-5">4:00 - 5:00 عصراً</option>
+                                    <option value="5-6">5:00 - 6:00 مساءً</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">ملاحظات إضافية</label>
+                            <textarea id="notes" class="form-control" rows="4" placeholder="أي معلومات إضافية تود مشاركتها معنا..."></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">
+                                أوافق على <a href="terms.html" target="_blank">الشروط والأحكام</a> و<a href="privacy.html" target="_blank">سياسة الخصوصية</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            <i class="fas fa-calendar-check"></i>
+                            تأكيد الحجز
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Booking Info -->
+                <div class="booking-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>ساعات العمل</h4>
+                        <p>الأحد - الخميس<br>9:00 ص - 6:00 م</p>
+                        <p style="margin-top: 0.5rem;">الجمعة - السبت<br>مغلق</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>موقع المعرض</h4>
+                        <p>العقبة، الدائرة الخامسة<br>شارع الفارابي</p>
+                        <a href="contact.html" class="btn btn-sm btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-map"></i>
+                            عرض الخريطة
+                        </a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>تواصل معنا</h4>
+                        <p style="margin-bottom: 0.5rem;"><i class="fas fa-phone"></i> 0780563033</p>
+                        <p style="margin-bottom: 1rem;"><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <a href="https://wa.me/962780563033" target="_blank" class="btn btn-sm btn-success">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>ضمان وخصوصية</h4>
+                        <p>جميع معلوماتك محمية ولن يتم مشاركتها مع أي طرف ثالث</p>
+                        <ul style="margin-top: 1rem; padding-right: 1.5rem;">
+                            <li>سرية تامة للمعلومات</li>
+                            <li>لا التزام بالشراء</li>
+                            <li>استشارة مجانية</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card highlights">
+                        <h4><i class="fas fa-star"></i> لماذا تحجز معنا؟</h4>
+                        <ul class="highlights-list">
+                            <li><i class="fas fa-check-circle"></i> تجربة قيادة مجانية</li>
+                            <li><i class="fas fa-check-circle"></i> فحص شامل للسيارة</li>
+                            <li><i class="fas fa-check-circle"></i> استشارة من خبراء</li>
+                            <li><i class="fas fa-check-circle"></i> عروض حصرية</li>
+                            <li><i class="fas fa-check-circle"></i> تسهيلات في الدفع</li>
+                            <li><i class="fas fa-check-circle"></i> ضمان شامل</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="booking-faq">
+        <div class="container">
+            <h2>أسئلة شائعة حول الحجز</h2>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h4><i class="fas fa-question-circle"></i> كم يستغرق تأكيد الموعد؟</h4>
+                    <p>سنتواصل معك خلال 24 ساعة لتأكيد موعدك المفضل.</p>
+                </div>
+                <div class="faq-card">
+                    <h4><i class="fas fa-question-circle"></i> هل تجربة القيادة مجانية؟</h4>
+                    <p>نعم، تجربة القيادة مجانية تماماً. نطلب فقط رخصة قيادة سارية المفعول.</p>
+                </div>
+                <div class="faq-card">
+                    <h4><i class="fas fa-question-circle"></i> هل يمكنني إلغاء أو تعديل الموعد؟</h4>
+                    <p>بالتأكيد، يمكنك الاتصال بنا في أي وقت لتعديل أو إلغاء موعدك.</p>
+                </div>
+                <div class="faq-card">
+                    <h4><i class="fas fa-question-circle"></i> ماذا أحتاج لإحضاره؟</h4>
+                    <p>فقط رخصة القيادة سارية المفعول لتجربة القيادة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض سيارات متخصص في بيع وشراء السيارات الفاخرة والمستعملة بأفضل الأسعار في الأردن.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005?igsh=MWt0bzBlNm9laDQ1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="reviews.html">آراء العملاء</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="search.html">بحث متقدم</a></li>
+                        <li><a href="compare.html">مقارنة السيارات</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</li>
+                        <li><i class="fas fa-phone"></i> 0780563033</li>
+                        <li><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('preferredDate');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+        });
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                city: document.getElementById('city').value,
+                appointmentType: document.getElementById('appointmentType').value,
+                carInterest: document.getElementById('carInterest').value,
+                preferredDate: document.getElementById('preferredDate').value,
+                preferredTime: document.getElementById('preferredTime').value,
+                notes: document.getElementById('notes').value
+            };
+
+            // Show success message
+            const successModal = document.createElement('div');
+            successModal.className = 'modal';
+            successModal.style.display = 'flex';
+            successModal.innerHTML = `
+                <div class="modal-content" style="max-width: 500px; text-align: center;">
+                    <div class="modal-body" style="padding: 3rem 2rem;">
+                        <div style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2 style="color: #1f2937; margin-bottom: 1rem;">تم تأكيد الحجز!</h2>
+                        <p style="color: #6b7280; margin-bottom: 2rem;">
+                            شكراً ${formData.fullName}، تم استلام طلب حجز موعدك بنجاح. 
+                            سنتواصل معك على رقم ${formData.phone} خلال 24 ساعة لتأكيد الموعد.
+                        </p>
+                        <div style="background: #f3f4f6; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                            <h4 style="margin-bottom: 1rem;">تفاصيل الموعد</h4>
+                            <p style="margin: 0.5rem 0;"><strong>التاريخ:</strong> ${formData.preferredDate}</p>
+                            <p style="margin: 0.5rem 0;"><strong>الوقت:</strong> ${formData.preferredTime}</p>
+                            <p style="margin: 0.5rem 0;"><strong>النوع:</strong> ${formData.appointmentType}</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.location.href='index.html'">
+                            <i class="fas fa-home"></i>
+                            العودة للرئيسية
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(successModal);
+
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

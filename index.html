@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mustafa Teihi - معرض سيارات العقبة">
+    <meta name="keywords" content="سيارات, معرض سيارات, بيع سيارات, العقبة, الأردن, mustafa Teihi">
+    <meta name="author" content="Mustafa Teihi">
+    <title>Mustafa Teihi - معرض سيارات العقبة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section id="home" class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-background" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="container">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">عرض خاص</span>
+                                <h1 class="slide-title">سيارات فاخرة</h1>
+                                <h2 class="slide-subtitle">بأفضل الأسعار في الأردن</h2>
+                                <p class="slide-description">اكتشف مجموعتنا المميزة من السيارات الفاخرة - BMW, Mercedes, Bugatti</p>
+                                <div class="slide-buttons">
+                                    <a href="shop.html" class="btn btn-primary">تصفح السيارات</a>
+                                    <a href="contact.html" class="btn btn-outline-white">اتصل بنا</a>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800" alt="سيارات فاخرة">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-background" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="container">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">جديد</span>
+                                <h1 class="slide-title">سيارات SUV</h1>
+                                <h2 class="slide-subtitle">قوة وأناقة لا مثيل لها</h2>
+                                <p class="slide-description">استكشف أحدث موديلات السيارات الرياضية متعددة الاستخدامات</p>
+                                <div class="slide-buttons">
+                                    <a href="shop.html" class="btn btn-primary">تصفح السيارات</a>
+                                    <a href="contact.html" class="btn btn-outline-white">اتصل بنا</a>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800" alt="سيارات SUV">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-background" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="container">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">الأكثر مبيعاً</span>
+                                <h1 class="slide-title">سيارات اقتصادية</h1>
+                                <h2 class="slide-subtitle">جودة عالية بأسعار معقولة</h2>
+                                <p class="slide-description">سيارات موثوقة واقتصادية مثالية للاستخدام اليومي</p>
+                                <div class="slide-buttons">
+                                    <a href="shop.html" class="btn btn-primary">تصفح السيارات</a>
+                                    <a href="contact.html" class="btn btn-outline-white">اتصل بنا</a>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800" alt="سيارات اقتصادية">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <div class="slide-background" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <div class="container">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">حصري</span>
+                                <h1 class="slide-title">سيارات رياضية</h1>
+                                <h2 class="slide-subtitle">سرعة وأداء استثنائي</h2>
+                                <p class="slide-description">عش تجربة القيادة الرياضية مع أقوى السيارات في معرضنا</p>
+                                <div class="slide-buttons">
+                                    <a href="shop.html" class="btn btn-primary">تصفح السيارات</a>
+                                    <a href="contact.html" class="btn btn-outline-white">اتصل بنا</a>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="سيارات رياضية">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="slider-arrow prev-arrow" onclick="moveSlide(-1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="slider-arrow next-arrow" onclick="moveSlide(1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Dots Navigation -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا تختار <span class="gradient-text">Mustafa Teihi</span>؟</h2>
+                <p class="section-description">نقدم لك أفضل السيارات بأعلى جودة وأفضل الأسعار</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>سيارات متنوعة</h3>
+                    <p>مجموعة واسعة من السيارات الجديدة والمستعملة من مختلف الماركات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>جودة مضمونة</h3>
+                    <p>جميع سياراتنا مفحوصة بدقة ومعتمدة من خبراء متخصصين</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>أفضل الأسعار في السوق مع إمكانية التقسيط المريح</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>صيانة شاملة</h3>
+                    <p>خدمات ما بعد البيع وصيانة دورية مجانية لفترة محددة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>استبدال السيارات</h3>
+                    <p>نقبل استبدال سيارتك القديمة بأخرى جديدة بأفضل الأسعار</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ضمان شامل</h3>
+                    <p>ضمان على جميع السيارات وخدمة عملاء متميزة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">عروض <span class="gradient-text">السيارات</span> المميزة</h2>
+                <p class="section-description">اكتشف مجموعتنا الحصرية من أفخم السيارات</p>
+            </div>
+            
+            <div class="premium-cars-showcase">
+                <!-- Car 1 -->
+                <div class="premium-car-item">
+                    <div class="premium-car-image">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=1200" alt="مرسيدس AMG GT">
+                        <div class="car-badge">الأكثر طلباً</div>
+                        <div class="car-overlay">
+                            <button class="btn-view-details"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="premium-car-content">
+                        <div class="car-brand">Mercedes-Benz</div>
+                        <h3 class="car-name">مرسيدس AMG GT</h3>
+                        <p class="car-desc">سيارة رياضية فاخرة تجمع بين القوة والأناقة</p>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>8,500 كم</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-cog"></i>
+                                <span>أوتوماتيك</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>بنزين</span>
+                            </div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">السعر</span>
+                                <span class="price-amount">285,000 <small>دينار</small></span>
+                            </div>
+                            <button class="btn btn-gradient"><i class="fas fa-phone"></i> استفسر الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="premium-car-item featured">
+                    <div class="premium-car-image">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200" alt="مرسيدس S-Class">
+                        <div class="car-badge special">عرض خاص</div>
+                        <div class="car-overlay">
+                            <button class="btn-view-details"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="premium-car-content">
+                        <div class="car-brand">Mercedes-Benz</div>
+                        <h3 class="car-name">مرسيدس S-Class 2024</h3>
+                        <p class="car-desc">قمة الفخامة والتكنولوجيا الألمانية الحديثة</p>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2024 (صفر)</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>0 كم</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-cog"></i>
+                                <span>فل أوبشن</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>ضمان 5 سنوات</span>
+                            </div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">السعر</span>
+                                <span class="price-amount">425,000 <small>دينار</small></span>
+                            </div>
+                            <button class="btn btn-gradient"><i class="fas fa-star"></i> احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="premium-car-item">
+                    <div class="premium-car-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200" alt="بورش 911">
+                        <div class="car-badge">جديد</div>
+                        <div class="car-overlay">
+                            <button class="btn-view-details"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="premium-car-content">
+                        <div class="car-brand">Porsche</div>
+                        <h3 class="car-name">بورش 911 تيربو</h3>
+                        <p class="car-desc">أيقونة السيارات الرياضية بأداء استثنائي</p>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>12,000 كم</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-cog"></i>
+                                <span>PDK</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>640 حصان</span>
+                            </div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">السعر</span>
+                                <span class="price-amount">395,000 <small>دينار</small></span>
+                            </div>
+                            <button class="btn btn-gradient"><i class="fas fa-phone"></i> تواصل معنا</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-cars">
+                <a href="shop.html" class="btn btn-large btn-outline-gradient">
+                    <i class="fas fa-th"></i> عرض جميع السيارات
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <img src="images/about.svg" alt="About Mustafa Teihi">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">من نحن</h2>
+                    <p class="about-description">
+                        <strong>Mustafa Teihi</strong> معرض سيارات رائد في العقبة يقدم أفضل السيارات.
+                        نؤمن بأن السيارة الجيدة تصنع الفرق، لذلك نوفر مجموعة متنوعة من السيارات
+                        عالية الجودة بأسعار تنافسية.
+                    </p>
+                    <p class="about-description">
+                        منذ انطلاقتنا، ساعدنا مئات العملاء في العثور على سياراتهم المثالية.
+                        نحن ملتزمون بتقديم أفضل الخدمات وضمان رضا عملائنا بنسبة 100%.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>مصداقية وأمانة</h4>
+                                <p>نبني علاقات طويلة الأمد مع عملائنا</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>جودة مضمونة</h4>
+                                <p>جميع سياراتنا مفحوصة ومعتمدة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل <span class="gradient-text">معنا</span></h2>
+                <p class="section-description">نحن هنا للإجابة على استفساراتك</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>mustafaTeihi2000@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p>0780563033</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>الموقع</h4>
+                            <p>الأردن - العقبة - الخامسة</p>
+                            <p>شارع الفارابي</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005?igsh=MWt0bzBlNm9laDQ1ag==" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="رقم الهاتف" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="رسالتك" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i>
+                        إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض مصطفى تيهي لبيع السيارات الفاخرة والمميزة في العقبة، الأردن</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="gallery.html">المعرض</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة القيادة</a></li>
+                        <li><a href="#">التقسيط المريح</a></li>
+                        <li><a href="#">ضمان ما بعد البيع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل</h5>
+                        <p>السبت - الخميس: 9:00 ص - 10:00 م</p>
+                        <p>الجمعة: 2:00 م - 10:00 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

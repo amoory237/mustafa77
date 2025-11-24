@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مقارنة السيارات - معرض مصطفى تيهي">
+    <title>مقارنة السيارات - Mustafa Teihi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link active">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+        <div class="container">
+            <h1 class="page-title">مقارنة السيارات</h1>
+            <p class="page-subtitle">قارن بين السيارات واختر الأنسب لك</p>
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <span>/</span>
+                <span>مقارنة السيارات</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Section -->
+    <section class="compare-section section-padding">
+        <div class="container">
+            <!-- Instructions -->
+            <div class="compare-instructions">
+                <i class="fas fa-info-circle"></i>
+                <p>اختر ما يصل إلى 3 سيارات للمقارنة بينها</p>
+            </div>
+
+            <!-- Car Selection -->
+            <div class="car-selection">
+                <h3><i class="fas fa-plus-circle"></i> إضافة سيارات للمقارنة</h3>
+                <div class="selection-grid">
+                    <div class="select-slot" data-slot="1">
+                        <div class="slot-placeholder">
+                            <i class="fas fa-car"></i>
+                            <p>اختر السيارة الأولى</p>
+                            <button class="btn btn-primary" onclick="openCarSelector(1)">
+                                <i class="fas fa-plus"></i> إضافة
+                            </button>
+                        </div>
+                    </div>
+                    <div class="select-slot" data-slot="2">
+                        <div class="slot-placeholder">
+                            <i class="fas fa-car"></i>
+                            <p>اختر السيارة الثانية</p>
+                            <button class="btn btn-primary" onclick="openCarSelector(2)">
+                                <i class="fas fa-plus"></i> إضافة
+                            </button>
+                        </div>
+                    </div>
+                    <div class="select-slot" data-slot="3">
+                        <div class="slot-placeholder">
+                            <i class="fas fa-car"></i>
+                            <p>اختر السيارة الثالثة</p>
+                            <button class="btn btn-outline" onclick="openCarSelector(3)">
+                                <i class="fas fa-plus"></i> إضافة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div id="comparisonTable" class="comparison-table" style="display: none;">
+                <div class="table-header">
+                    <h3><i class="fas fa-exchange-alt"></i> نتائج المقارنة</h3>
+                    <button class="btn btn-outline" onclick="clearComparison()">
+                        <i class="fas fa-times"></i> مسح الكل
+                    </button>
+                </div>
+
+                <div class="compare-grid">
+                    <!-- Images Row -->
+                    <div class="compare-row images-row">
+                        <div class="compare-label"></div>
+                        <div class="compare-cell" id="img-1"></div>
+                        <div class="compare-cell" id="img-2"></div>
+                        <div class="compare-cell" id="img-3"></div>
+                    </div>
+
+                    <!-- Name Row -->
+                    <div class="compare-row">
+                        <div class="compare-label">الموديل</div>
+                        <div class="compare-cell" id="name-1"></div>
+                        <div class="compare-cell" id="name-2"></div>
+                        <div class="compare-cell" id="name-3"></div>
+                    </div>
+
+                    <!-- Price Row -->
+                    <div class="compare-row highlight">
+                        <div class="compare-label"><i class="fas fa-dollar-sign"></i> السعر</div>
+                        <div class="compare-cell" id="price-1"></div>
+                        <div class="compare-cell" id="price-2"></div>
+                        <div class="compare-cell" id="price-3"></div>
+                    </div>
+
+                    <!-- Year Row -->
+                    <div class="compare-row">
+                        <div class="compare-label"><i class="fas fa-calendar"></i> سنة الصنع</div>
+                        <div class="compare-cell" id="year-1"></div>
+                        <div class="compare-cell" id="year-2"></div>
+                        <div class="compare-cell" id="year-3"></div>
+                    </div>
+
+                    <!-- Mileage Row -->
+                    <div class="compare-row">
+                        <div class="compare-label"><i class="fas fa-tachometer-alt"></i> الكيلومترات</div>
+                        <div class="compare-cell" id="mileage-1"></div>
+                        <div class="compare-cell" id="mileage-2"></div>
+                        <div class="compare-cell" id="mileage-3"></div>
+                    </div>
+
+                    <!-- Transmission Row -->
+                    <div class="compare-row">
+                        <div class="compare-label"><i class="fas fa-cog"></i> ناقل الحركة</div>
+                        <div class="compare-cell" id="transmission-1"></div>
+                        <div class="compare-cell" id="transmission-2"></div>
+                        <div class="compare-cell" id="transmission-3"></div>
+                    </div>
+
+                    <!-- Fuel Type Row -->
+                    <div class="compare-row">
+                        <div class="compare-label"><i class="fas fa-gas-pump"></i> نوع الوقود</div>
+                        <div class="compare-cell" id="fuel-1"></div>
+                        <div class="compare-cell" id="fuel-2"></div>
+                        <div class="compare-cell" id="fuel-3"></div>
+                    </div>
+
+                    <!-- Color Row -->
+                    <div class="compare-row">
+                        <div class="compare-label"><i class="fas fa-palette"></i> اللون</div>
+                        <div class="compare-cell" id="color-1"></div>
+                        <div class="compare-cell" id="color-2"></div>
+                        <div class="compare-cell" id="color-3"></div>
+                    </div>
+
+                    <!-- Condition Row -->
+                    <div class="compare-row">
+                        <div class="compare-label"><i class="fas fa-star"></i> الحالة</div>
+                        <div class="compare-cell" id="condition-1"></div>
+                        <div class="compare-cell" id="condition-2"></div>
+                        <div class="compare-cell" id="condition-3"></div>
+                    </div>
+
+                    <!-- Actions Row -->
+                    <div class="compare-row actions-row">
+                        <div class="compare-label"></div>
+                        <div class="compare-cell" id="action-1"></div>
+                        <div class="compare-cell" id="action-2"></div>
+                        <div class="compare-cell" id="action-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Winner Card -->
+            <div id="winnerCard" class="winner-card" style="display: none;">
+                <h3><i class="fas fa-trophy"></i> الخيار الأفضل</h3>
+                <div id="winnerContent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Selector Modal -->
+    <div id="carSelectorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>اختر سيارة</h3>
+                <button class="modal-close" onclick="closeCarSelector()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cars-grid" id="availableCars">
+                    <!-- Cars will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض متخصص في بيع وشراء السيارات الفاخرة والاقتصادية في العقبة، الأردن.</p>
+                    <div class="footer-contact">
+                        <h5>تواصل معنا:</h5>
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="search.html">بحث متقدم</a></li>
+                        <li><a href="compare.html">مقارنة السيارات</a></li>
+                        <li><a href="reviews.html">آراء العملاء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة قيادة مجانية</a></li>
+                        <li><a href="#">تقسيط مريح</a></li>
+                        <li><a href="#">ضمان شامل</a></li>
+                        <li><a href="#">صيانة دورية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل:</h5>
+                        <p>السبت - الخميس: 9 صباحاً - 10 مساءً</p>
+                        <p>الجمعة: 2 مساءً - 10 مساءً</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/compare.js"></script>
+</body>
+</html>

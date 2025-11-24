@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Teihi - اتصل بنا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link active">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا للإجابة على جميع استفساراتك</p>
+        </div>
+    </section>
+
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-section">
+                    <h2>معلومات الاتصال</h2>
+                    <p class="contact-intro">تواصل معنا عبر أي من القنوات التالية، أو املأ النموذج وسنرد عليك في أقرب وقت ممكن.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-info-card">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>البريد الإلكتروني</h3>
+                            <p>mustafaTeihi2000@gmail.com</p>
+                            <p>للاستفسارات والدعم</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>الهاتف</h3>
+                            <p>0780563033</p>
+                            <p>متاح من 9 ص - 6 م</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>العنوان</h3>
+                            <p>الأردن - العقبة - الخامسة</p>
+                            <p>شارع الفارابي</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>ساعات العمل</h3>
+                            <p>الأحد - الخميس: 9 ص - 6 م</p>
+                            <p>الجمعة - السبت: مغلق</p>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3>تابعنا على</h3>
+                        <div class="social-links-large">
+                            <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank" class="social-link-large">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/mustafaTeihi005?igsh=MWt0bzBlNm9laDQ1ag==" target="_blank" class="social-link-large">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>أرسل لنا رسالة</h2>
+                    <form class="contact-form-page" id="contactFormPage">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل *</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف *</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">الموضوع</label>
+                                <select id="subject" class="form-control">
+                                    <option>استفسار عام</option>
+                                    <option>طلب عرض سعر</option>
+                                    <option>دعم فني</option>
+                                    <option>شراكة</option>
+                                    <option>أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">رسالتك *</label>
+                            <textarea id="message" class="form-control" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">موقعنا</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.7890123456!2d35.0!3d29.5333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDMxJzU5LjkiTiAzNcKwMDAnMDAuMCJF!5e0!3m2!1sen!2sjo!4v1234567890123!5m2!1sen!2sjo" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 20px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض مصطفى تيهي لبيع السيارات الفاخرة والمميزة في العقبة، الأردن</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="gallery.html">المعرض</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة القيادة</a></li>
+                        <li><a href="#">التقسيط المريح</a></li>
+                        <li><a href="#">ضمان ما بعد البيع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل</h5>
+                        <p>السبت - الخميس: 9:00 ص - 10:00 م</p>
+                        <p>الجمعة: 2:00 م - 10:00 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('contactFormPage').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

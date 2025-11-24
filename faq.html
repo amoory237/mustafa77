@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأسئلة الشائعة - معرض مصطفى تيهي للسيارات">
+    <title>الأسئلة الشائعة - Mustafa Teihi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <h1 class="page-title">الأسئلة الشائعة</h1>
+            <p class="page-subtitle">إجابات على أكثر الأسئلة شيوعاً</p>
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <span>/</span>
+                <span>الأسئلة الشائعة</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-intro">
+                <h2>لديك سؤال؟ نحن هنا للمساعدة</h2>
+                <p>اطلع على الأسئلة الأكثر شيوعاً أو تواصل معنا مباشرة للحصول على مساعدة فورية</p>
+            </div>
+
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    الكل
+                </button>
+                <button class="faq-category-btn" data-category="buying">
+                    <i class="fas fa-shopping-cart"></i>
+                    الشراء
+                </button>
+                <button class="faq-category-btn" data-category="financing">
+                    <i class="fas fa-money-bill-wave"></i>
+                    التمويل
+                </button>
+                <button class="faq-category-btn" data-category="warranty">
+                    <i class="fas fa-shield-alt"></i>
+                    الضمان
+                </button>
+                <button class="faq-category-btn" data-category="services">
+                    <i class="fas fa-tools"></i>
+                    الخدمات
+                </button>
+            </div>
+
+            <div class="faq-container">
+                <!-- Buying Questions -->
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <h3>كيف يمكنني شراء سيارة من معرضكم؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك شراء سيارة من معرضنا بعدة طرق:</p>
+                        <ul>
+                            <li>زيارة المعرض شخصياً في العقبة، شارع الفارابي</li>
+                            <li>الاتصال بنا على الرقم 0780563033</li>
+                            <li>التواصل عبر البريد الإلكتروني mustafaTeihi2000@gmail.com</li>
+                            <li>تصفح السيارات المتوفرة على موقعنا واختيار السيارة المناسبة</li>
+                        </ul>
+                        <p>فريقنا متاح لمساعدتك في جميع خطوات الشراء.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <h3>هل يمكنني تجربة السيارة قبل الشراء؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بالتأكيد! نوفر خدمة تجربة القيادة لجميع سياراتنا. يمكنك حجز موعد لتجربة القيادة عبر:</p>
+                        <ul>
+                            <li>الاتصال بنا مباشرة</li>
+                            <li>ملء نموذج حجز موعد المعاينة على الموقع</li>
+                            <li>الزيارة المباشرة للمعرض</li>
+                        </ul>
+                        <p>نطلب منك إحضار رخصة قيادة سارية المفعول.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <h3>ما هي طرق الدفع المتاحة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نوفر عدة طرق دفع مرنة:</p>
+                        <ul>
+                            <li>الدفع النقدي الكامل</li>
+                            <li>التحويل البنكي</li>
+                            <li>الشيكات المصدقة</li>
+                            <li>التمويل البنكي (بالتعاون مع البنوك المحلية)</li>
+                            <li>خطط التقسيط المرنة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Financing Questions -->
+                <div class="faq-item" data-category="financing">
+                    <div class="faq-question">
+                        <h3>هل تقدمون خدمات التمويل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نتعاون مع أفضل البنوك والمؤسسات المالية في الأردن لتقديم خيارات تمويل مرنة:</p>
+                        <ul>
+                            <li>تمويل يصل إلى 80% من قيمة السيارة</li>
+                            <li>فترات سداد تصل إلى 7 سنوات</li>
+                            <li>معدلات فائدة تنافسية</li>
+                            <li>موافقة سريعة خلال 24-48 ساعة</li>
+                        </ul>
+                        <p>فريقنا يساعدك في اختيار الخطة الأنسب لميزانيتك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="financing">
+                    <div class="faq-question">
+                        <h3>ما هي المستندات المطلوبة للحصول على التمويل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>عادةً ما تطلب البنوك المستندات التالية:</p>
+                        <ul>
+                            <li>نسخة عن بطاقة الهوية الشخصية</li>
+                            <li>إثبات الدخل (كشف راتب، حساب بنكي، إلخ)</li>
+                            <li>شهادة عدم ممانعة من صاحب العمل</li>
+                            <li>كشف حساب بنكي لآخر 6 أشهر</li>
+                            <li>نموذج طلب التمويل مكتمل</li>
+                        </ul>
+                        <p>المتطلبات قد تختلف حسب البنك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="financing">
+                    <div class="faq-question">
+                        <h3>كم تستغرق عملية الموافقة على التمويل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>في معظم الحالات، تستغرق عملية الموافقة من 24 إلى 48 ساعة بعد استلام جميع المستندات المطلوبة. نحن نعمل على تسريع العملية قدر الإمكان حتى تتمكن من الحصول على سيارتك الجديدة في أقرب وقت.</p>
+                    </div>
+                </div>
+
+                <!-- Warranty Questions -->
+                <div class="faq-item" data-category="warranty">
+                    <div class="faq-question">
+                        <h3>هل السيارات مشمولة بالضمان؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم ضمانات متنوعة:</p>
+                        <ul>
+                            <li>السيارات الجديدة: ضمان الوكيل الكامل (عادةً 3-5 سنوات)</li>
+                            <li>السيارات المستعملة: ضمان محدود من 3 إلى 6 أشهر</li>
+                            <li>إمكانية شراء ضمان ممتد لجميع السيارات</li>
+                        </ul>
+                        <p>تفاصيل الضمان تختلف حسب نوع السيارة وحالتها.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="warranty">
+                    <div class="faq-question">
+                        <h3>ماذا يغطي الضمان؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الضمان الأساسي عادةً يغطي:</p>
+                        <ul>
+                            <li>المحرك والناقل</li>
+                            <li>نظام التبريد</li>
+                            <li>نظام الكهرباء الأساسي</li>
+                            <li>نظام التعليق</li>
+                            <li>نظام الفرامل</li>
+                        </ul>
+                        <p>الضمان الممتد قد يشمل تغطية أوسع. يرجى الاطلاع على شروط الضمان المحددة لكل سيارة.</p>
+                    </div>
+                </div>
+
+                <!-- Services Questions -->
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>هل تقدمون خدمات الصيانة والإصلاح؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، لدينا مركز صيانة متكامل يقدم:</p>
+                        <ul>
+                            <li>الصيانة الدورية</li>
+                            <li>الإصلاحات الميكانيكية</li>
+                            <li>الإصلاحات الكهربائية</li>
+                            <li>صيانة المكيفات</li>
+                            <li>خدمات الفحص الشامل</li>
+                        </ul>
+                        <p>فنيونا معتمدون وذوو خبرة عالية.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>هل تقبلون السيارات القديمة للاستبدال؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بالتأكيد! نقدم خدمة تقييم السيارات القديمة وقبولها كدفعة أولى للسيارة الجديدة. عملية التقييم تشمل:</p>
+                        <ul>
+                            <li>فحص شامل للسيارة</li>
+                            <li>تقييم الحالة الميكانيكية</li>
+                            <li>فحص الهيكل الخارجي</li>
+                            <li>مراجعة سجل الصيانة</li>
+                        </ul>
+                        <p>نقدم أفضل سعر في السوق لسيارتك القديمة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>هل توفرون خدمة التوصيل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نوفر خدمة التوصيل المجانية داخل مدينة العقبة. للمناطق الأخرى في الأردن، نقدم خدمة التوصيل برسوم رمزية حسب المسافة. كما نساعد في إجراءات النقل والتسجيل.</p>
+                    </div>
+                </div>
+
+                <!-- General Questions -->
+                <div class="faq-item" data-category="all">
+                    <div class="faq-question">
+                        <h3>هل جميع السيارات لديكم مفحوصة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، جميع سياراتنا المستعملة تخضع لفحص شامل ومتعدد النقاط يشمل:</p>
+                        <ul>
+                            <li>فحص المحرك والناقل</li>
+                            <li>فحص نظام الفرامل</li>
+                            <li>فحص نظام التعليق</li>
+                            <li>فحص الأنظمة الكهربائية</li>
+                            <li>فحص الهيكل الخارجي</li>
+                            <li>فحص الإطارات والعجلات</li>
+                        </ul>
+                        <p>نقدم تقرير الفحص الكامل لكل سيارة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="all">
+                    <div class="faq-question">
+                        <h3>كيف يمكنني متابعة السيارات الجديدة المتوفرة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك متابعة آخر السيارات المتوفرة عبر:</p>
+                        <ul>
+                            <li>زيارة موقعنا الإلكتروني بانتظام</li>
+                            <li>متابعتنا على Facebook و Instagram</li>
+                            <li>الاشتراك في النشرة الإخبارية</li>
+                            <li>التواصل معنا عبر WhatsApp</li>
+                        </ul>
+                        <p>نقوم بتحديث المخزون بشكل مستمر.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="all">
+                    <div class="faq-question">
+                        <h3>ما هي ساعات عمل المعرض؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ساعات العمل:</p>
+                        <ul>
+                            <li>الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً</li>
+                            <li>الجمعة - السبت: مغلق</li>
+                        </ul>
+                        <p>يمكنك حجز موعد خارج ساعات العمل عن طريق الاتصال المسبق.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions -->
+            <div class="faq-contact">
+                <div class="faq-contact-card">
+                    <div class="faq-contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>لا تزال لديك أسئلة؟</h3>
+                    <p>فريق الدعم لدينا مستعد لمساعدتك في أي وقت</p>
+                    <div class="faq-contact-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            اتصل بنا
+                        </a>
+                        <a href="tel:0780563033" class="btn btn-outline">
+                            <i class="fas fa-phone"></i>
+                            0780563033
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض سيارات متخصص في بيع وشراء السيارات الفاخرة والمستعملة بأفضل الأسعار في الأردن.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005?igsh=MWt0bzBlNm9laDQ1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="reviews.html">آراء العملاء</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="search.html">بحث متقدم</a></li>
+                        <li><a href="compare.html">مقارنة السيارات</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</li>
+                        <li><i class="fas fa-phone"></i> 0780563033</li>
+                        <li><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Category filter
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+                
+                // Update active button
+                document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filter FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                    item.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

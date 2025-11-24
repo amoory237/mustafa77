@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Teihi - معرض السيارات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                            <li><a href="search.html" class="nav-link">البحث المتقدم</a></li>
+                            <li><a href="compare.html" class="nav-link">المقارنة</a></li>
+                            <li><a href="reviews.html" class="nav-link">التقييمات</a></li>
+                            <li><a href="about.html" class="nav-link">من نحن</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>معرض السيارات الفاخرة</h1>
+            <p>اكتشف مجموعتنا الحصرية من أفخم السيارات في العالم</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all"><span>الكل</span></button>
+                <button class="filter-btn" data-filter="modern"><span>سيارات رياضية</span></button>
+                <button class="filter-btn" data-filter="classic"><span>سيارات كلاسيكية</span></button>
+                <button class="filter-btn" data-filter="minimal"><span>سيارات فاخرة</span></button>
+                <button class="filter-btn" data-filter="luxury"><span>سيارات خارقة</span></button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-car-side"></i> لامبورغيني أفينتادور</h3>
+                            <p><i class="fas fa-star"></i> قمة الأداء والفخامة الإيطالية</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="classic">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-crown"></i> فيراري 488 GTB</h3>
+                            <p><i class="fas fa-fire"></i> التراث الإيطالي العريق</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="minimal">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-gem"></i> مرسيدس S-Class</h3>
+                            <p><i class="fas fa-star"></i> الفخامة الألمانية الراقية</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="luxury">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-chess-queen"></i> رولز رويس فانتوم</h3>
+                            <p><i class="fas fa-crown"></i> قمة الفخامة والرقي البريطاني</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-bolt"></i> بورش 911 تيربو</h3>
+                            <p><i class="fas fa-tachometer-alt"></i> الأداء الرياضي الأسطوري</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="classic">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-certificate"></i> بنتلي كونتيننتال GT</h3>
+                            <p><i class="fas fa-award"></i> الأناقة البريطانية الفاخرة</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="minimal">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-rocket"></i> أودي R8</h3>
+                            <p><i class="fas fa-cogs"></i> التقنية الألمانية المتطورة</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="luxury">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1566023888560-6be31c7eb475?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-trophy"></i> بوغاتي شيرون</h3>
+                            <p><i class="fas fa-star"></i> التميز الفرنسي المطلق</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-mountain"></i> رينج روفر سبورت</h3>
+                            <p><i class="fas fa-shield-alt"></i> القوة والفخامة البريطانية</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="minimal">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-fire-alt"></i> مرسيدس AMG GT</h3>
+                            <p><i class="fas fa-bolt"></i> الأداء الرياضي الفائق</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-star"></i> مرسيدس GLE كوبيه</h3>
+                            <p><i class="fas fa-car"></i> SUV الفاخرة الرياضية</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="minimal">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1600705722908-bab1e61c0b4d?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-briefcase"></i> مرسيدس E-Class</h3>
+                            <p><i class="fas fa-gem"></i> الأناقة التنفيذية العصرية</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="luxury">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1622909510685-c6b9c3d00ebf?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-crown"></i> مرسيدس مايباخ S-Class</h3>
+                            <p><i class="fas fa-trophy"></i> قمة الفخامة والترف المطلق</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1563422156298-c778a278f9a5?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-star"></i> مرسيدس C-Class</h3>
+                            <p><i class="fas fa-balance-scale"></i> الأداء والراحة المتوازنة</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="minimal">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1618843479619-f1a1267b3815?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-cube"></i> مرسيدس G-Class</h3>
+                            <p><i class="fas fa-shield-alt"></i> الأسطورة الفاخرة الميدانية</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-card" style="background-image: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800'); background-size: cover; background-position: center;">
+                        <div class="gallery-overlay">
+                            <h3><i class="fas fa-wind"></i> مرسيدس CLS</h3>
+                            <p><i class="fas fa-magic"></i> التصميم الكوبيه الانسيابي</p>
+                            <button class="btn btn-outline"><i class="fas fa-eye"></i> معاينة التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض مصطفى تيهي لبيع السيارات الفاخرة والمميزة في العقبة، الأردن</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="gallery.html">المعرض</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة القيادة</a></li>
+                        <li><a href="#">التقسيط المريح</a></li>
+                        <li><a href="#">ضمان ما بعد البيع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل</h5>
+                        <p>السبت - الخميس: 9:00 ص - 10:00 م</p>
+                        <p>الجمعة: 2:00 م - 10:00 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

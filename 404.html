@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الصفحة غير موجودة - 404">
+    <title>404 - الصفحة غير موجودة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        .error-404 {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-404::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .error-404::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .error-container {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+        }
+
+        .error-number {
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: swing 3s ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+        }
+
+        .error-title {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .error-message {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .error-btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .error-btn-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .error-btn-outline:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 2rem auto 3rem;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 3.5rem 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-box button {
+            position: absolute;
+            left: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-box button:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .quick-links {
+            margin-top: 3rem;
+        }
+
+        .quick-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .quick-link {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .quick-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .quick-link i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .error-actions {
+                flex-direction: column;
+                padding: 0 1rem;
+            }
+
+            .error-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .quick-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-404">
+        <div class="error-container">
+            <div class="error-icon">
+                <i class="fas fa-car-crash"></i>
+            </div>
+            <div class="error-number">404</div>
+            <h1 class="error-title">عذراً! الصفحة غير موجودة</h1>
+            <p class="error-message">
+                يبدو أن الصفحة التي تبحث عنها قد انتقلت إلى موقع آخر أو لم تعد موجودة.
+                لا تقلق، يمكنك العودة إلى الصفحة الرئيسية أو البحث عما تريد.
+            </p>
+
+            <div class="search-box">
+                <form action="shop.html" method="get">
+                    <input type="text" name="q" placeholder="ابحث عن سيارة أو صفحة...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="error-actions">
+                <a href="index.html" class="error-btn error-btn-primary">
+                    <i class="fas fa-home"></i>
+                    العودة للرئيسية
+                </a>
+                <a href="shop.html" class="error-btn error-btn-outline">
+                    <i class="fas fa-car"></i>
+                    تصفح السيارات
+                </a>
+                <a href="contact.html" class="error-btn error-btn-outline">
+                    <i class="fas fa-phone"></i>
+                    اتصل بنا
+                </a>
+            </div>
+
+            <div class="quick-links">
+                <h3>أو انتقل مباشرة إلى:</h3>
+                <div class="quick-links-grid">
+                    <a href="index.html" class="quick-link">
+                        <i class="fas fa-home"></i>
+                        الرئيسية
+                    </a>
+                    <a href="shop.html" class="quick-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        المتجر
+                    </a>
+                    <a href="gallery.html" class="quick-link">
+                        <i class="fas fa-images"></i>
+                        المعرض
+                    </a>
+                    <a href="about.html" class="quick-link">
+                        <i class="fas fa-info-circle"></i>
+                        من نحن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-focus search input
+        document.querySelector('.search-box input').focus();
+
+        // Add enter animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.error-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.8s ease';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

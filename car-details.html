@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل السيارة - Mustafa Teihi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/car-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>Mustafa<span>Teihi</span></h1>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                            <li><a href="shop.html" class="nav-link active">المتجر</a></li>
+                            <li><a href="gallery.html" class="nav-link">المعرض</a></li>
+                            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <a href="shop.html">المتجر</a>
+                <i class="fas fa-chevron-left"></i>
+                <span>مرسيدس AMG GT 2024</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Car Details Section -->
+    <section class="car-details-section">
+        <div class="container">
+            <div class="car-details-grid">
+                <!-- Left Side - Images Gallery -->
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=1200" alt="مرسيدس AMG GT" id="mainImage">
+                        <button class="wishlist-btn" id="wishlistBtn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="car-status-badge available">
+                            <i class="fas fa-check-circle"></i> متاح للبيع
+                        </div>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=300" alt="صورة 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=300" alt="صورة 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=300" alt="صورة 3">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=300" alt="صورة 4">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300" alt="صورة 5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Car Info -->
+                <div class="car-info">
+                    <div class="car-header">
+                        <div class="car-title-section">
+                            <h1 class="car-title">مرسيدس AMG GT 2024</h1>
+                            <div class="car-badges">
+                                <span class="badge badge-luxury"><i class="fas fa-gem"></i> فاخرة</span>
+                                <span class="badge badge-sport"><i class="fas fa-flag-checkered"></i> رياضية</span>
+                            </div>
+                        </div>
+                        <div class="car-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">(4.5) - 28 تقييم</span>
+                        </div>
+                    </div>
+
+                    <div class="car-price-section">
+                        <div class="price-info">
+                            <span class="price-label">السعر</span>
+                            <h2 class="car-price">285,000 <span>دينار</span></h2>
+                            <p class="price-note">السعر قابل للتفاوض</p>
+                        </div>
+                        <div class="views-count">
+                            <i class="fas fa-eye"></i>
+                            <span>1,245 مشاهدة</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Specs -->
+                    <div class="quick-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-calendar"></i>
+                            <div class="spec-info">
+                                <span class="spec-label">السنة</span>
+                                <span class="spec-value">2024</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div class="spec-info">
+                                <span class="spec-label">الكيلومترات</span>
+                                <span class="spec-value">8,500 كم</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cog"></i>
+                            <div class="spec-info">
+                                <span class="spec-label">ناقل الحركة</span>
+                                <span class="spec-value">أوتوماتيك</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <div class="spec-info">
+                                <span class="spec-label">نوع الوقود</span>
+                                <span class="spec-value">بنزين</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large btn-contact">
+                            <i class="fas fa-phone"></i>
+                            اتصل الآن
+                        </button>
+                        <button class="btn btn-outline btn-large btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </button>
+                        <button class="btn btn-outline btn-large btn-test-drive">
+                            <i class="fas fa-car"></i>
+                            احجز تجربة قيادة
+                        </button>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="share-section">
+                        <span class="share-label">مشاركة:</span>
+                        <div class="share-buttons">
+                            <button class="share-btn facebook" title="فيسبوك">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="share-btn twitter" title="تويتر">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn whatsapp" title="واتساب">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button class="share-btn copy" title="نسخ الرابط">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="details-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">
+                        <i class="fas fa-info-circle"></i>
+                        الوصف
+                    </button>
+                    <button class="tab-btn" data-tab="specs">
+                        <i class="fas fa-list"></i>
+                        المواصفات الكاملة
+                    </button>
+                    <button class="tab-btn" data-tab="features">
+                        <i class="fas fa-star"></i>
+                        المميزات
+                    </button>
+                    <button class="tab-btn" data-tab="calculator">
+                        <i class="fas fa-calculator"></i>
+                        حاسبة التقسيط
+                    </button>
+                    <button class="tab-btn" data-tab="reviews">
+                        <i class="fas fa-comments"></i>
+                        التقييمات (28)
+                    </button>
+                </div>
+
+                <div class="tabs-content">
+                    <!-- Description Tab -->
+                    <div class="tab-content active" id="description">
+                        <h3>وصف السيارة</h3>
+                        <p>
+                            مرسيدس AMG GT 2024 - سيارة رياضية فاخرة تجمع بين الأداء الاستثنائي والفخامة الألمانية الراقية. 
+                            هذه السيارة في حالة ممتازة مع 8,500 كيلومتر فقط، تم صيانتها بالكامل في الوكالة المعتمدة.
+                        </p>
+                        <p>
+                            محرك V8 بقوة 577 حصان يوفر تسارع من 0-100 كم/س في 3.6 ثانية فقط. نظام الدفع الخلفي مع 
+                            ناقل حركة أوتوماتيك 7 سرعات. السيارة مجهزة بجميع أنظمة الأمان الحديثة وتقنيات القيادة المساعدة.
+                        </p>
+                        <div class="description-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>فحص كامل في الوكالة</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>سجل صيانة كامل</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ضمان ساري</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>صاحب واحد فقط</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specifications Tab -->
+                    <div class="tab-content" id="specs">
+                        <h3>المواصفات التقنية</h3>
+                        <div class="specs-grid">
+                            <div class="spec-category">
+                                <h4><i class="fas fa-engine"></i> المحرك والأداء</h4>
+                                <div class="spec-list">
+                                    <div class="spec-row">
+                                        <span class="spec-name">نوع المحرك</span>
+                                        <span class="spec-val">V8 Biturbo</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">السعة</span>
+                                        <span class="spec-val">4.0 لتر</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">القوة</span>
+                                        <span class="spec-val">577 حصان</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">عزم الدوران</span>
+                                        <span class="spec-val">700 نيوتن/متر</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">السرعة القصوى</span>
+                                        <span class="spec-val">310 كم/س</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">التسارع 0-100</span>
+                                        <span class="spec-val">3.6 ثانية</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spec-category">
+                                <h4><i class="fas fa-car"></i> معلومات عامة</h4>
+                                <div class="spec-list">
+                                    <div class="spec-row">
+                                        <span class="spec-name">الماركة</span>
+                                        <span class="spec-val">مرسيدس بنز</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">الموديل</span>
+                                        <span class="spec-val">AMG GT</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">السنة</span>
+                                        <span class="spec-val">2024</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">اللون الخارجي</span>
+                                        <span class="spec-val">رمادي ميتاليك</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">اللون الداخلي</span>
+                                        <span class="spec-val">جلد أسود/أحمر</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">عدد الأبواب</span>
+                                        <span class="spec-val">2</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">عدد المقاعد</span>
+                                        <span class="spec-val">2</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spec-category">
+                                <h4><i class="fas fa-cogs"></i> ناقل الحركة والدفع</h4>
+                                <div class="spec-list">
+                                    <div class="spec-row">
+                                        <span class="spec-name">ناقل الحركة</span>
+                                        <span class="spec-val">أوتوماتيك 7 سرعات</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">نوع الدفع</span>
+                                        <span class="spec-val">دفع خلفي (RWD)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spec-category">
+                                <h4><i class="fas fa-gas-pump"></i> استهلاك الوقود</h4>
+                                <div class="spec-list">
+                                    <div class="spec-row">
+                                        <span class="spec-name">نوع الوقود</span>
+                                        <span class="spec-val">بنزين 95</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">الاستهلاك (مدينة)</span>
+                                        <span class="spec-val">12 لتر/100كم</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">الاستهلاك (طريق)</span>
+                                        <span class="spec-val">8 لتر/100كم</span>
+                                    </div>
+                                    <div class="spec-row">
+                                        <span class="spec-name">سعة الخزان</span>
+                                        <span class="spec-val">75 لتر</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features Tab -->
+                    <div class="tab-content" id="features">
+                        <h3>المميزات والتجهيزات</h3>
+                        <div class="features-grid">
+                            <div class="feature-category">
+                                <h4><i class="fas fa-shield-alt"></i> السلامة والأمان</h4>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> نظام ABS المانع للانزلاق</li>
+                                    <li><i class="fas fa-check"></i> 8 وسائد هوائية</li>
+                                    <li><i class="fas fa-check"></i> نظام التحكم بالثبات ESP</li>
+                                    <li><i class="fas fa-check"></i> كاميرا خلفية 360 درجة</li>
+                                    <li><i class="fas fa-check"></i> حساسات أمامية وخلفية</li>
+                                    <li><i class="fas fa-check"></i> تثبيت سرعة ذكي</li>
+                                    <li><i class="fas fa-check"></i> نظام تحذير المسار</li>
+                                    <li><i class="fas fa-check"></i> فرامل طوارئ أوتوماتيكية</li>
+                                </ul>
+                            </div>
+
+                            <div class="feature-category">
+                                <h4><i class="fas fa-couch"></i> الراحة والرفاهية</h4>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> مقاعد جلد رياضية AMG</li>
+                                    <li><i class="fas fa-check"></i> تدفئة وتبريد المقاعد</li>
+                                    <li><i class="fas fa-check"></i> مقاعد كهربائية بالكامل</li>
+                                    <li><i class="fas fa-check"></i> ذاكرة للمقاعد</li>
+                                    <li><i class="fas fa-check"></i> مقود متعدد الوظائف</li>
+                                    <li><i class="fas fa-check"></i> تحكم كهربائي بالمقود</li>
+                                    <li><i class="fas fa-check"></i> فتحة سقف بانورامية</li>
+                                    <li><i class="fas fa-check"></i> تكييف أوتوماتيك ثنائي</li>
+                                </ul>
+                            </div>
+
+                            <div class="feature-category">
+                                <h4><i class="fas fa-tv"></i> الوسائط والترفيه</h4>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> شاشة لمس 12.3 إنش</li>
+                                    <li><i class="fas fa-check"></i> نظام ملاحة GPS</li>
+                                    <li><i class="fas fa-check"></i> نظام صوتي Burmester</li>
+                                    <li><i class="fas fa-check"></i> Apple CarPlay & Android Auto</li>
+                                    <li><i class="fas fa-check"></i> بلوتوث وUSB</li>
+                                    <li><i class="fas fa-check"></i> راديو DAB</li>
+                                    <li><i class="fas fa-check"></i> شحن لاسلكي للهاتف</li>
+                                </ul>
+                            </div>
+
+                            <div class="feature-category">
+                                <h4><i class="fas fa-lightbulb"></i> الإضاءة والرؤية</h4>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> إضاءة LED كاملة</li>
+                                    <li><i class="fas fa-check"></i> إضاءة تكيفية ذكية</li>
+                                    <li><i class="fas fa-check"></i> مصابيح ضباب LED</li>
+                                    <li><i class="fas fa-check"></i> مساحات أوتوماتيكية</li>
+                                    <li><i class="fas fa-check"></i> مرايا كهربائية قابلة للطي</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Tab -->
+                    <div class="tab-content" id="calculator">
+                        <h3><i class="fas fa-calculator"></i> حاسبة التقسيط</h3>
+                        <div class="calculator-container">
+                            <div class="calculator-form">
+                                <div class="form-row">
+                                    <label>سعر السيارة</label>
+                                    <input type="text" value="285,000 دينار" readonly class="calc-input">
+                                </div>
+                                <div class="form-row">
+                                    <label>الدفعة الأولى (%)</label>
+                                    <input type="range" min="10" max="50" value="20" id="downPaymentSlider" class="slider">
+                                    <span class="slider-value" id="downPaymentValue">20%</span>
+                                </div>
+                                <div class="form-row">
+                                    <label>مبلغ الدفعة الأولى</label>
+                                    <input type="text" id="downPaymentAmount" value="57,000 دينار" readonly class="calc-input">
+                                </div>
+                                <div class="form-row">
+                                    <label>فترة التقسيط (سنوات)</label>
+                                    <select id="loanPeriod" class="calc-select">
+                                        <option value="1">سنة واحدة</option>
+                                        <option value="2">سنتان</option>
+                                        <option value="3" selected>3 سنوات</option>
+                                        <option value="4">4 سنوات</option>
+                                        <option value="5">5 سنوات</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <label>نسبة الفائدة السنوية (%)</label>
+                                    <input type="number" id="interestRate" value="5.5" step="0.1" class="calc-input">
+                                </div>
+                                <button class="btn btn-primary btn-calculate" onclick="calculateLoan()">
+                                    <i class="fas fa-calculator"></i>
+                                    احسب القسط الشهري
+                                </button>
+                            </div>
+                            <div class="calculator-result" id="calculatorResult">
+                                <h4>نتيجة الحساب</h4>
+                                <div class="result-item">
+                                    <span>القسط الشهري</span>
+                                    <strong id="monthlyPayment">6,845 دينار</strong>
+                                </div>
+                                <div class="result-item">
+                                    <span>إجمالي المبلغ المطلوب</span>
+                                    <strong id="totalLoan">228,000 دينار</strong>
+                                </div>
+                                <div class="result-item">
+                                    <span>إجمالي الفوائد</span>
+                                    <strong id="totalInterest">18,420 دينار</strong>
+                                </div>
+                                <div class="result-item total">
+                                    <span>إجمالي المبلغ المدفوع</span>
+                                    <strong id="totalAmount">303,420 دينار</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="calculator-note">
+                            <i class="fas fa-info-circle"></i>
+                            الحسابات تقريبية وقد تختلف حسب شروط البنك. للحصول على عرض دقيق، يرجى التواصل معنا.
+                        </p>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div class="tab-content" id="reviews">
+                        <h3>آراء العملاء والتقييمات</h3>
+                        <div class="reviews-summary">
+                            <div class="rating-overview">
+                                <div class="rating-number">4.5</div>
+                                <div class="rating-stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>بناءً على 28 تقييم</p>
+                            </div>
+                            <div class="rating-bars">
+                                <div class="rating-bar-item">
+                                    <span>5 نجوم</span>
+                                    <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                                    <span>21</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>4 نجوم</span>
+                                    <div class="bar"><div class="fill" style="width: 15%"></div></div>
+                                    <span>4</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>3 نجوم</span>
+                                    <div class="bar"><div class="fill" style="width: 7%"></div></div>
+                                    <span>2</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>2 نجوم</span>
+                                    <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                                    <span>1</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span>1 نجمة</span>
+                                    <div class="bar"><div class="fill" style="width: 0%"></div></div>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="https://ui-avatars.com/api/?name=أحمد+محمد&background=667eea&color=fff" alt="أحمد محمد">
+                                    <div class="reviewer-info">
+                                        <h4>أحمد محمد</h4>
+                                        <div class="review-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="review-date">منذ 3 أيام</span>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    سيارة رائعة جداً، الأداء ممتاز والتعامل مع المعرض كان احترافي للغاية. 
+                                    السيارة كما في الوصف تماماً، أنصح بالتعامل معهم.
+                                </p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="https://ui-avatars.com/api/?name=خالد+علي&background=f093fb&color=fff" alt="خالد علي">
+                                    <div class="reviewer-info">
+                                        <h4>خالد علي</h4>
+                                        <div class="review-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="review-date">منذ أسبوع</span>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    سيارة جميلة ومواصفات ممتازة، الخدمة جيدة لكن السعر مرتفع قليلاً. 
+                                    بشكل عام راضي عن الصفقة.
+                                </p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="https://ui-avatars.com/api/?name=محمد+حسن&background=43e97b&color=fff" alt="محمد حسن">
+                                    <div class="reviewer-info">
+                                        <h4>محمد حسن</h4>
+                                        <div class="review-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="review-date">منذ أسبوعين</span>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    تجربة شراء مميزة، الموظفون محترفون وصادقون. السيارة في حالة ممتازة 
+                                    والفحص أكد كل المعلومات المذكورة. شكراً لكم!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Cars -->
+            <section class="similar-cars">
+                <h2><i class="fas fa-car"></i> سيارات مشابهة</h2>
+                <div class="similar-cars-grid">
+                    <div class="similar-car-card">
+                        <div class="similar-car-image">
+                            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400" alt="مرسيدس S-Class">
+                        </div>
+                        <h4>مرسيدس S-Class 2024</h4>
+                        <p class="similar-car-price">425,000 دينار</p>
+                        <a href="#" class="btn btn-sm btn-outline">عرض التفاصيل</a>
+                    </div>
+
+                    <div class="similar-car-card">
+                        <div class="similar-car-image">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400" alt="بورش 911">
+                        </div>
+                        <h4>بورش 911 تيربو 2023</h4>
+                        <p class="similar-car-price">395,000 دينار</p>
+                        <a href="#" class="btn btn-sm btn-outline">عرض التفاصيل</a>
+                    </div>
+
+                    <div class="similar-car-card">
+                        <div class="similar-car-image">
+                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400" alt="أودي R8">
+                        </div>
+                        <h4>أودي R8 V10 2024</h4>
+                        <p class="similar-car-price">365,000 دينار</p>
+                        <a href="#" class="btn btn-sm btn-outline">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mustafa<span>Teihi</span></h3>
+                    <p>معرض مصطفى تيهي لبيع السيارات الفاخرة والمميزة في العقبة، الأردن</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 0780563033</p>
+                        <p><i class="fas fa-envelope"></i> mustafaTeihi2000@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> العقبة، الدائرة الخامسة، شارع الفارابي</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المتجر</a></li>
+                        <li><a href="gallery.html">المعرض</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">بيع السيارات الفاخرة</a></li>
+                        <li><a href="#">تجربة القيادة</a></li>
+                        <li><a href="#">التقسيط المريح</a></li>
+                        <li><a href="#">ضمان ما بعد البيع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1Bq2rxJdj9/" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mustafaTeihi005" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962780563033" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-hours">
+                        <h5>ساعات العمل</h5>
+                        <p>السبت - الخميس: 9:00 ص - 10:00 م</p>
+                        <p>الجمعة: 2:00 م - 10:00 م</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mustafa Teihi. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/car-details.js"></script>
+</body>
+</html>
